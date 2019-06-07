@@ -6,6 +6,9 @@ import android.widget.TextView
 
 fun TextView.textValue() = this.text.toString()
 
+fun TextView.textInt():Int = this.text.toString().toInt()
+
+
 fun TextView.setFont(context: Context, font: String, fileName: String) {
     this.typeface = Typeface.createFromAsset(context.assets, fileName)
     this.text = font
