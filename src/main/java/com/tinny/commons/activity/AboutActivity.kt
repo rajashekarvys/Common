@@ -1,6 +1,7 @@
 package com.tinny.commons.activity
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -22,12 +23,11 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         when(v!!.id){
             R.id.moreApps ->{ launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266") }
             R.id.rateUs ->{launchViewIntent("market://details?id=$packageName")}
-            R.id.reportBugs ->{}
+            R.id.reportBugs ->{reportBug()}
             R.id.share ->{onClickShare()}
         }
 
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,7 +64,6 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
 
 
     private fun onClickShare() {
-
             val text = String.format(getString(R.string.share_text), intent.getStringExtra(Intent_AppName), getStoreUrl())
             Intent().apply {
                 action = Intent.ACTION_SEND
@@ -73,14 +72,20 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
                 type = "text/plain"
                 startActivity(Intent.createChooser(this, getString(R.string.invite_via)))
             }
-
     }
 
     private fun setupCopyright() {
-        val versionName = intent.getStringExtra(intent.getStringExtra(Intent_AppVesion)) ?: ""
+        val versionName = intent.getStringExtra(Intent_AppVesion)
         val year = Calendar.getInstance().get(Calendar.YEAR)
         txtCopyrights.text = String.format(getString(R.string.copyright), versionName, year)
     }
 
+    private fun reportBug(){
+        val mIntent = Intent(Intent.ACTION_SENDTO)
+        mIntent.data = Uri.parse("mailto:")
+        mIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("tinnymobileapps@gmail.com"))
+        mIntent.putExtra(Intent.EXTRA_SUBJECT, intent.getStringExtra(Intent_AppName) +"(v-$intent.getStringExtra(Intent_AppVesion)): " + getString(R.string.report_bug_desc))
+        startActivity(Intent.createChooser(mIntent, "Send Email"))
+    }
 
 }

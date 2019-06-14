@@ -26,7 +26,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/txtTitle"
             android:textColor="@color/md_grey_black_dark"
-            android:textStyle="bold"
             android:textSize="18sp"/>
     <TextView
             android:layout_toEndOf="@+id/txtIcon"
