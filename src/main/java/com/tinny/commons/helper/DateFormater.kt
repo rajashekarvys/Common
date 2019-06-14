@@ -6,3 +6,13 @@ fun msToMinSec(durationInMillis:Long):String{
     val minute = durationInMillis / (1000 * 60) % 60
     return String.format("%02d:%02d:%02d", minute, second, millis)
 }
+fun secToMinSec(durationInSec:Int):String{
+    val second = durationInSec  % 60
+    val minute = durationInSec / (60) % 60
+    val hours = (durationInSec / (60 * 60) % 24)
+    return if (hours!=0){
+        String.format("%02d:%02d:%02d", hours,minute, second)
+    }else{
+        String.format("%02d:%02d", minute, second)
+    }
+}
