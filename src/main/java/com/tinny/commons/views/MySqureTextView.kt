@@ -6,6 +6,9 @@ import android.widget.TextView
 
 class MySqureTextView : TextView {
 
+
+
+
     constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
