@@ -95,4 +95,5 @@ fun Activity.launchViewIntent(url: String) {
             }
         }
     }.start()
+
 }

@@ -13,6 +13,12 @@ import android.widget.Toast
 import androidx.core.content.FileProvider
 import com.tinny.commons.isOnMainThread
 import java.io.File
+import android.os.VibrationEffect
+import android.os.Build
+import androidx.core.content.ContextCompat.getSystemService
+import android.os.Vibrator
+
+
 
 fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
     // for images/videos/gifs try getting a media content uri first, like content://media/external/images/media/438
@@ -156,9 +162,26 @@ fun Context.getDataColumn(uri: Uri, selection: String? = null, selectionArgs: Ar
     return null
 }
 
+fun Context.vibrate(millSeconds:Long){
+    val v = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        v.vibrate(VibrationEffect.createOneShot(millSeconds, VibrationEffect.DEFAULT_AMPLITUDE))
+    } else {
+        v.vibrate(millSeconds)
+    }
+}
+
 private fun isMediaDocument(uri: Uri) = uri.authority == "com.android.providers.media.documents"
 
 private fun isDownloadsDocument(uri: Uri) = uri.authority == "com.android.providers.downloads.documents"
 
 private fun isExternalStorageDocument(uri: Uri) = uri.authority == "com.android.externalstorage.documents"
 
+fun Context.version(packageName:String):String{
+    return try {
+        this.packageManager.getPackageInfo(packageName, 0).versionName
+    }catch (e:java.lang.Exception){
+        "1.0.0"
+    }
+
+}

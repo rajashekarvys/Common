@@ -65,8 +65,15 @@
     <string name="f_camera">I</string>
     <string name="f_image">J</string>
 
+    <string name="f_notification">S</string>
+    <string name="f_notification_Vibrate">T</string>
     <string name="f_fav">Q</string>
     <string name="f_unfav">R</string>
     <string name="f_star">L</string>
     <string name="f_full_star">K</string>
+
+    <string name="daily_training">Daily training reminder</string>
+    <string name="daily_time">Remind me at %1$s</string>
+    <string name="sound_when_playing">Sound when playing</string>
+    <string name="vibrate">Vibrate tap on view</string>
 </resources>
