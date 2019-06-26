@@ -13,8 +13,8 @@ import com.tinny.commons.R
 import com.tinny.commons.extentions.getStoreUrl
 import com.tinny.commons.extentions.launchViewIntent
 import com.tinny.commons.extentions.setFont
-import kotlinx.android.synthetic.main.activity_about.*
 import kotlinx.android.synthetic.main.about_row.view.*
+import kotlinx.android.synthetic.main.activity_about.*
 import java.util.*
 
 class AboutActivity : AppCompatActivity(),View.OnClickListener {
