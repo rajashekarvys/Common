@@ -24,5 +24,6 @@ fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 const val Intent_AppName = "AN"
 const val Intent_AppVesion = "AV"
 const val Test = "aa"
+
 const val Intent_AppIcon = "AI"
 const val Intent_AppPACKAGENAME = "APN"
