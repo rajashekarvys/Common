@@ -6,6 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@color/md_grey_300"
         tools:context=".activity.AboutActivity">
 
     <ImageView
@@ -46,19 +47,20 @@
                 android:id="@+id/txtSupport"
                 android:layout_height="wrap_content"/>
 
-        <include layout="@layout/row"
+        <include layout="@layout/about_row"
                  android:id="@+id/moreApps"/>
 
-        <include layout="@layout/row"
+        <include layout="@layout/about_row"
                  android:id="@+id/reportBugs"/>
 
-        <include layout="@layout/row"
+        <include layout="@layout/about_row"
                  android:id="@+id/share"/>
 
-        <include layout="@layout/row"
+        <include layout="@layout/about_row"
                  android:id="@+id/rateUs"/>
 
         <TextView
+                android:layout_marginBottom="10dp"
                 tools:text="jjkjkj"
                 android:gravity="bottom|center"
                 android:layout_gravity="bottom"

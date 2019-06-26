@@ -63,4 +63,6 @@
     <dimen name="fastscroll_scrollbar_padding_start">8dp</dimen>
     <dimen name="fastscroll_scrollbar_padding_end">8dp</dimen>
 
+    <dimen name="sp_32">32sp</dimen>
+
 </resources>
