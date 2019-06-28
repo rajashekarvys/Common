@@ -5,6 +5,7 @@
     <color name="divider_grey">#40808080</color>
     <color name="gradient_grey_start">#CC000000</color>
     <color name="trasperent_black">#74000000</color>
+    <color name="trasperent_White">#D2A0DEFF</color>
 
     <!-- SwitchCompat -->
     <color name="thumb_deactivated">#FFECECEC</color>
