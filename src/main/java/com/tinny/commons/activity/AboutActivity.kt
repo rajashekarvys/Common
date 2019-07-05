@@ -19,6 +19,8 @@ import java.util.*
 
 class AboutActivity : AppCompatActivity(),View.OnClickListener {
 
+
+//    I am new
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.moreApps ->{ launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266") }
