@@ -13,3 +13,9 @@ fun TextView.setFont(context: Context, font: String, fileName: String) {
     this.typeface = Typeface.createFromAsset(context.assets, fileName)
     this.text = font
 }
+
+fun TextView.setFontWithColor(context: Context, font: String, fileName: String,color:Int) {
+    this.typeface = Typeface.createFromAsset(context.assets, fileName)
+    this.text = font
+    this.setTextColor(color)
+}
