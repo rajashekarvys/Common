@@ -77,7 +77,8 @@
     <string name="sound_when_playing">Sound when playing</string>
     <string name="vibrate">Vibrate tap on view</string>
 
-
+    <string name="find_number">Find number: %1$s </string>
+    <string name="reaming_numbers"> Reaming left: %1$s</string>
     <!--colorMap[AppConstants.BLUE] = ColorsData(ApplicationBootstrap.context.resources.getColor(R.color.md_blue_500),getString(R.string.blue))
     colorMap[AppConstants.RED] = ApplicationBootstrap.context.resources.getColor(R.color.md_red_500)
     colorMap[AppConstants.BROWN] = ApplicationBootstrap.context.resources.getColor(R.color.md_brown_500)
@@ -104,4 +105,5 @@
     <string name="identify_color">Identify Color</string>
 
 
+    <string name="wrong_selection">Wrong Selection</string>
 </resources>
