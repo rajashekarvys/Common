@@ -98,4 +98,10 @@
     <string name="GREEN">GREEN</string>
     <string name="PINK">PINK</string>
 
+    <string name="memory_grid">Memory Grid</string>
+    <string name="memory_grid_revers">Memory Grid Revers</string>
+    <string name="find_number_from_grid">Find number From Grid</string>
+    <string name="identify_color">Identify Color</string>
+
+
 </resources>
