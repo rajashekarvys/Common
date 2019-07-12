@@ -105,7 +105,7 @@
     <string name="identify_color">Identify Color</string>
     <string name="same_as_previous">Same As Previous</string>
     <string name="identify_new">Identify New Element</string>
-
+    <string name="fallow_directions">Fallow direction</string>
 
     <string name="wrong_selection">Wrong Selection</string>
 </resources>
