@@ -27,7 +27,6 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
             R.id.reportBugs ->{reportBug()}
             R.id.share ->{onClickShare()}
         }
-
     }
 
 
