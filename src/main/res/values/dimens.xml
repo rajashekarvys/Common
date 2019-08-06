@@ -65,5 +65,6 @@
 
     <dimen name="sp_32">32sp</dimen>
     <dimen name="sp_42">42sp</dimen>
+    <dimen name="sp_52">52sp</dimen>
 
 </resources>
