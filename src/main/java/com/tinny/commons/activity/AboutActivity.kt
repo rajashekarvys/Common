@@ -63,7 +63,6 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
     }
 
 
-
     private fun onClickShare() {
             val text = String.format(getString(R.string.share_text), intent.getStringExtra(Intent_AppName), getStoreUrl())
             Intent().apply {
