@@ -85,7 +85,7 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         val mIntent = Intent(Intent.ACTION_SENDTO)
         mIntent.data = Uri.parse("mailto:")
         mIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("tinnymobileapps@gmail.com"))
-        mIntent.putExtra(Intent.EXTRA_SUBJECT, intent.getStringExtra(Intent_AppName) +"(v-$intent.getStringExtra(Intent_AppVesion)): " + getString(R.string.report_bug_desc))
+        mIntent.putExtra(Intent.EXTRA_SUBJECT, intent.getStringExtra(Intent_AppName) + "v-"+ intent.getStringExtra(Intent_AppVesion) + " -- "+ getString(R.string.report_bug_desc))
         startActivity(Intent.createChooser(mIntent, "Send Email"))
     }
 
