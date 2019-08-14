@@ -19,6 +19,7 @@ import java.util.*
 
 class AboutActivity : AppCompatActivity(),View.OnClickListener {
 
+
 //    I am new 2.0 Yes 
     override fun onClick(v: View?) {
         when(v!!.id){
@@ -28,8 +29,6 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
             R.id.share ->{onClickShare()}
         }
     }
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
