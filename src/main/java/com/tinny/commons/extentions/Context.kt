@@ -4,19 +4,13 @@ import android.content.ContentUris
 import android.content.Context
 import android.database.Cursor
 import android.net.Uri
-import android.os.Environment
-import android.os.Handler
-import android.os.Looper
+import android.os.*
 import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.widget.Toast
 import androidx.core.content.FileProvider
 import com.tinny.commons.isOnMainThread
 import java.io.File
-import android.os.VibrationEffect
-import android.os.Build
-import androidx.core.content.ContextCompat.getSystemService
-import android.os.Vibrator
 
 
 
@@ -28,7 +22,6 @@ fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
     if (uri == null) {
         uri = FileProvider.getUriForFile(this, "$applicationId.provider", file)
     }
-
     return uri!!
 }
 

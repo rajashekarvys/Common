@@ -48,8 +48,9 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
 
         reportBugs.txtTitle.text = getString(R.string.report_bug)
         reportBugs.txtDesc.text =getString(R.string.report_bug_desc)
+        setupCopyright()
 
-        moreApps.txtIcon.setFont(this,getString(R.string.f_more_apps),"icomoon_common.ttf")
+        moreApps.txtIcon.text = "s"
         rateUs.txtIcon.setFont(this,getString(R.string.f_full_star),"icomoon_common.ttf")
         share.txtIcon.setFont(this,getString(R.string.f_fav),"icomoon_common.ttf")
         reportBugs.txtIcon.setFont(this,getString(R.string.f_bug),"icomoon_common.ttf")
@@ -59,7 +60,6 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         rateUs.setOnClickListener(this)
         share.setOnClickListener(this)
         reportBugs.setOnClickListener(this)
-        setupCopyright()
     }
 
     private fun onClickShare() {
@@ -83,7 +83,7 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         val mIntent = Intent(Intent.ACTION_SENDTO)
         mIntent.data = Uri.parse("mailto:")
         mIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("tinnymobileapps@gmail.com"))
-        mIntent.putExtra(Intent.EXTRA_SUBJECT, intent.getStringExtra(Intent_AppName) + "v-"+ intent.getStringExtra(Intent_AppVesion) + " -- "+ getString(R.string.report_bug_desc))
+        mIntent.putExtra(Intent.EXTRA_SUBJECT, intent.getStringExtra(Intent_AppName) + " (v-"+ intent.getStringExtra(Intent_AppVesion) + " -- "+ getString(R.string.report_bug_desc))
         startActivity(Intent.createChooser(mIntent, "Send Email"))
     }
 
