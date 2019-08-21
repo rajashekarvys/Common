@@ -4,7 +4,9 @@
     <color name="activated_item_foreground">#44888888</color>
     <color name="divider_grey">#40808080</color>
     <color name="gradient_grey_start">#CC000000</color>
-    <color name="trasperent_black">#74000000</color>
+    <color name="trasperent_black">#54000000</color>
+    <color name="trasperent_black_low">#00000000</color>
+    <color name="trasperent_black_center">#24000000</color>
     <color name="trasperent_White">#D2A0DEFF</color>
 
     <!-- SwitchCompat -->
