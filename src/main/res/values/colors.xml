@@ -9,6 +9,8 @@
     <color name="trasperent_black_center">#24000000</color>
     <color name="trasperent_White">#D2A0DEFF</color>
 
+    <color name="trasperent_blue">#CB0277BD</color>
+
     <!-- SwitchCompat -->
     <color name="thumb_deactivated">#FFECECEC</color>
     <color name="track_deactivated">#FFB2B2B2</color>
