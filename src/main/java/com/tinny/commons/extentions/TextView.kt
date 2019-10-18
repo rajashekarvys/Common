@@ -40,6 +40,36 @@ fun TextView.changeWordColor(fullText: String, word: String, color: Int) {
         endIndex,
         Spannable.SPAN_INCLUSIVE_INCLUSIVE
     ) //To change color of text
+    spannableString.setSpan(
+        ForegroundColorSpan(color),
+        startIndex,
+        endIndex,
+        Spannable.SPAN_INCLUSIVE_INCLUSIVE
+    )
+    spannableString.setSpan(
+        ForegroundColorSpan(color),
+        startIndex,
+        endIndex,
+        Spannable.SPAN_INCLUSIVE_INCLUSIVE
+    )
+    builder.append(spannableString)
+
+    this.setText(builder, TextView.BufferType.SPANNABLE)
+}
+
+fun TextView.changeWordColorArray(fullText: String, words: Array<String>, color: Int) {
+    val builder = SpannableStringBuilder()
+    val spannableString = SpannableString(fullText)
+    for (word in words) {
+        val startIndex = fullText.indexOf(word.toLowerCase().trim())
+        val endIndex = startIndex + word.toLowerCase().trim().length
+        spannableString.setSpan(
+            ForegroundColorSpan(color),
+            startIndex,
+            endIndex,
+            Spannable.SPAN_INCLUSIVE_INCLUSIVE
+        )
+    }
     builder.append(spannableString)
     this.setText(builder, TextView.BufferType.SPANNABLE)
 }
