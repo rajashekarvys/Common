@@ -50,7 +50,7 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         reportBugs.txtDesc.text =getString(R.string.report_bug_desc)
         setupCopyright()
 
-        moreApps.txtIcon.text = "s"
+        moreApps.txtIcon.setFont(this,getString(R.string.f_more_apps),"icomoon_common.ttf")
         rateUs.txtIcon.setFont(this,getString(R.string.f_full_star),"icomoon_common.ttf")
         share.txtIcon.setFont(this,getString(R.string.f_fav),"icomoon_common.ttf")
         reportBugs.txtIcon.setFont(this,getString(R.string.f_bug),"icomoon_common.ttf")
