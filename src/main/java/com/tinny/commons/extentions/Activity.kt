@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import com.tinny.commons.*
 import com.tinny.commons.activity.AboutActivity
+import com.tinny.commons.helper.AppLoger
 import java.io.File
 
 fun Activity.setAsIntent(file: File, applicationId: String) {
@@ -51,25 +52,31 @@ fun Activity.openIntent(file: File, applicationId: String) {
 }
 
 fun Activity.shareIntent(path: String, applicationId: String) {
-    Thread {
-        val newUri = getFilePublicUri(File(path), applicationId) ?: return@Thread
-        Intent().apply {
-            action = Intent.ACTION_SEND
-            putExtra(Intent.EXTRA_STREAM, newUri)
-            type = getUriMimeType(path, newUri)
-            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+    try{
+        AppLoger.debugLogs("Test shareIntent==","path == $path applicationId == $applicationId")
+        Thread {
+            val newUri = getFilePublicUri(File(path), applicationId) ?: return@Thread
+            Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_STREAM, newUri)
+                type = getUriMimeType(path, newUri)
+                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
-            try {
-                if (resolveActivity(packageManager) != null) {
-                    startActivity(Intent.createChooser(this, getString(R.string.share_via)))
-                } else {
-                    toast(R.string.app_not_found)
+                try {
+                    if (resolveActivity(packageManager) != null) {
+                        startActivity(Intent.createChooser(this, getString(R.string.share_via)))
+                    } else {
+                        toast(R.string.app_not_found)
+                    }
+                } catch (e: RuntimeException) {
+
                 }
-            } catch (e: RuntimeException) {
-
             }
-        }
-    }.start()
+        }.start()
+    }catch (e: Exception){
+        toast(R.string.not_able_to_share)
+    }
+
 }
 
 fun Activity.lauchAboutUs(icon:Int,appName:String,packageName:String,appVersion:String){
