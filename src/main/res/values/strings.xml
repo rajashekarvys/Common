@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">commons</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -7,7 +7,7 @@
     <string name="list">List</string>
 
     <string name="app_not_found">Application not found</string>
-    <string name="not_able_to_share">Not able to share</string>
+    <string name="not_able_to_share" tools:ignore="ExtraTranslation">Not able to share</string>
     <string name="set_as">Set as</string>
     <string name="open_with">Open With</string>
     <string name="share_via">Share via</string>

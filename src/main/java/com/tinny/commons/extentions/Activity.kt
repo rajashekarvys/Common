@@ -51,6 +51,23 @@ fun Activity.openIntent(file: File, applicationId: String) {
     }.start()
 }
 
+fun Activity.shareMultipleImagesIntent(filesToSend: ArrayList<String>, applicationId: String) {
+    Thread {
+
+        val intent = Intent()
+        intent.action = Intent.ACTION_SEND_MULTIPLE
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Here are some files.")
+        intent.type = "image/*"
+        val files = ArrayList<Uri>()
+
+        for (path in filesToSend /* List of the files you want to send */) {
+            val newUri = getFilePublicUri(File(path), applicationId) ?: return@Thread
+            files.add(newUri)
+        }
+        intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, files)
+        startActivity(intent)
+    }.start()
+}
 fun Activity.shareIntent(path: String, applicationId: String) {
     try{
         AppLoger.debugLogs("Test shareIntent==","path == $path applicationId == $applicationId")
