@@ -98,4 +98,9 @@
     <string name="BLACK">BLACK</string>
     <string name="GREEN">GREEN</string>
     <string name="PINK">PINK</string>
+
+    <string name="try_aging">Try again</string>
+    <string name="good">Good</string>
+    <string name="excellent">Excellent</string>
+    <string name="next_level">Next Level</string>
 </resources>
