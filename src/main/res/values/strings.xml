@@ -28,6 +28,7 @@
     <string name="share_text">Hey, come check out %1$s at %2$s</string>
     <string name="invite_via">Invite via</string>
     <string name="copyright">v %1$s \nCopyright © Tinny Mobile Apps %2$d</string>
+
     <string name="f_contact_circle">a</string>
     <string name="f_add_circle">b</string>
     <string name="f_add">c</string>
@@ -71,6 +72,8 @@
     <string name="f_unfav">R</string>
     <string name="f_star">L</string>
     <string name="f_full_star">K</string>
+    <string name="f_done_full_circle">Z</string>
+    <string name="f_done_circle">z</string>
 
     <string name="daily_training">Daily training reminder</string>
     <string name="daily_time">Remind me at %1$s</string>
