@@ -72,6 +72,12 @@
     <string name="f_unfav">R</string>
     <string name="f_star">L</string>
     <string name="f_full_star">K</string>
+    <string name="f_pause_circle_unfill">W</string>
+    <string name="f_play_circle_unfill">U</string>
+    <string name="f_smile">X</string>
+    <string name="f_sad">Y</string>
+    <string name="f_trophy">V</string>
+
     <string name="f_done_full_circle">Z</string>
     <string name="f_done_circle">z</string>
 
@@ -106,4 +112,5 @@
     <string name="good">Good</string>
     <string name="excellent">Excellent</string>
     <string name="next_level">Next Level</string>
+    <string name="play">Play</string>
 </resources>
