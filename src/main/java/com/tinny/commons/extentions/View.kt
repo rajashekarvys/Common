@@ -5,6 +5,15 @@ import android.content.Context
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.inputmethod.InputMethodManager
+import android.R
+import android.transition.Fade
+import android.transition.Transition
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.opengl.ETC1.getHeight
+import androidx.core.view.ViewCompat.animate
+import android.R.attr.translationY
+
 
 fun View.isVisibile(): Boolean = visibility == View.VISIBLE
 
@@ -21,6 +30,36 @@ fun View.makeGone() {
     visibility = View.GONE
 }
 
+fun View.makeVisibleAnim() {
+    animate()
+        .alpha(1f)
+        .setDuration(300)
+        .setListener(object : AnimatorListenerAdapter() {
+            override fun onAnimationEnd(animation: Animator) {
+                super.onAnimationEnd(animation)
+                visibility = View.VISIBLE
+            }
+        })
+}
+
+fun View.makeGoneAnim() {
+    animate()
+        .alpha(0f)
+        .setDuration(300)
+        .setListener(object : AnimatorListenerAdapter() {
+            override fun onAnimationEnd(animation: Animator) {
+                super.onAnimationEnd(animation)
+                visibility = View.GONE
+            }
+        })
+}
+
+/*private fun toggle() {
+
+
+    TransitionManager.beginDelayedTransition(parent, transition)
+    image.setVi sibility(if (show) View.VISIBLE else View.GONE)
+}*/
 fun View.makeInvisible() {
     visibility = View.INVISIBLE
 }
