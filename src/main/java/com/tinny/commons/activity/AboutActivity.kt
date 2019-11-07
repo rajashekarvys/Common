@@ -23,7 +23,10 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
 //    I am new 2.0 Yes 
     override fun onClick(v: View?) {
         when(v!!.id){
-            R.id.moreApps ->{ launchViewIntent("https://play.google.com/store/apps/dev?id=9070296388022589266") }
+            R.id.moreApps ->{
+//                launchViewIntent("https://play.google.com/store/apps/dev?id=")
+                launchViewIntent("https://play.google.com/store/apps/developer?id=Tinnymobileapps")
+            }
             R.id.rateUs ->{launchViewIntent("market://details?id=$packageName")}
             R.id.reportBugs ->{reportBug()}
             R.id.share ->{onClickShare()}
