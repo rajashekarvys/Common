@@ -5,7 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import com.tinny.commons.*
 import com.tinny.commons.activity.AboutActivity
-import com.tinny.commons.helper.AppLoger
+import com.tinny.commons.helper.AppLogger
 import java.io.File
 
 fun Activity.setAsIntent(file: File, applicationId: String) {
@@ -70,7 +70,7 @@ fun Activity.shareMultipleImagesIntent(filesToSend: ArrayList<String>, applicati
 }
 fun Activity.shareIntent(path: String, applicationId: String) {
     try{
-        AppLoger.debugLogs("Test shareIntent==","path == $path applicationId == $applicationId")
+        AppLogger.debugLogs("Test shareIntent==","path == $path applicationId == $applicationId")
         Thread {
             val newUri = getFilePublicUri(File(path), applicationId) ?: return@Thread
             Intent().apply {

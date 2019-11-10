@@ -13,7 +13,7 @@ import java.util.Locale;
  * This class use to create the application logs
  */
 
-public class AppLoger {
+public class AppLogger {
     public static void debugLogs(String TAG, String message) {
 //        Log.d(TAG, message);
     }
