@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">"Обще"</string>
+
+    <string name="grid">"сетка"</string>
+    <string name="list">"Список"</string>
+
+    <string name="app_not_found">"Приложение не найдено"</string>
+    <string name="not_able_to_share" tools:ignore="ExtraTranslation">"Не могу поделиться"</string>
+    <string name="set_as">"Установить как"</string>
+    <string name="open_with">"Открыть с"</string>
+    <string name="share_via">"Отправить по"</string>
+    <string name="ok">"Хорошо"</string>
+    <string name="cancel">"Отмена"</string>
+    <string name="resume">"Резюме"</string>
+    <string name="restart">"Запустить снова"</string>
+    <string name="home">"Главная"</string>
+    <string name="more_apps">"Больше приложений"</string>
+    <string name="support">"Служба поддержки"</string>
+    <string name="report_bug">"Сообщить об ошибке"</string>
+    <string name="report_bug_desc">"Сообщить об ошибке или запросить новые функции"</string>
+    <string name="rate_us">"Оцените нас"</string>
+    <string name="rate_us_desc">"Оставьте положительный рейтинг, если вам нравится это приложение."</string>
+    <string name="more_apps_desc">"Проверьте больше приложений"</string>
+    <string name="share">"Пригласить друзей
+"</string>
+    <string name="share_desc">"Поделиться приложением с друзьями"</string>
+    <string name="share_text">"Приходите проверить %1$s на %2$s"</string>
+    <string name="invite_via">"Пригласить через"</string>
+    <string name="copyright">"v %1$s \ nCopyright © Tinny Mobile Apps %2$d"</string>
+
+
+
+    <string name="daily_training">"Ежедневное обучение напоминание"</string>
+    <string name="daily_time">"Напомни мне на %1$s"</string>
+    <string name="sound_when_playing">"Звук при игре"</string>
+    <string name="vibrate">"Вибрация нажмите на вид"</string>
+
+    <string name="find_number">"Найти номер: %1$s "</string>
+    <string name="reaming_numbers">" Развертывание осталось: %1$s"</string>
+    <string name="language">язык</string>
+
+    <!--colorMap[AppConstants.BLUE] = ColorsData(ApplicationBootstrap.context.resources.getColor(R.color.md_blue_500),getString(R.string.blue))
+    colorMap[AppConstants.RED] = ApplicationBootstrap.context.resources.getColor(R.color.md_red_500)
+    colorMap[AppConstants.BROWN] = ApplicationBootstrap.context.resources.getColor(R.color.md_brown_500)
+    colorMap[AppConstants.ORANGE] = ApplicationBootstrap.context.resources.getColor(R.color.md_orange_500)
+    colorMap[AppConstants.PERPUL] = ApplicationBootstrap.context.resources.getColor(R.color.md_purple_500)
+    colorMap[AppConstants.YELLOW] = ApplicationBootstrap.context.resources.getColor(R.color.md_yellow_500)
+    colorMap[AppConstants.BLACK] = ApplicationBootstrap.context.resources.getColor(R.color.md_grey_black)
+    colorMap[AppConstants.GREEN] = ApplicationBootstrap.context.resources.getColor(R.color.md_green_500)
+    colorMap[AppConstants.PINK] = ApplicationBootstrap.context.resources.getColor(R.color.md_pink_500)-->
+
+
+
+</resources>
