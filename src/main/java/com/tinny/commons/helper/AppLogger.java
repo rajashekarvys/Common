@@ -15,7 +15,7 @@ import java.util.Locale;
 
 public class AppLogger {
     public static void debugLogs(String TAG, String message) {
-//        Log.d(TAG, message);
+        Log.d(TAG, message);
     }
 
     public static void errorLogs(String TAG, String message) {

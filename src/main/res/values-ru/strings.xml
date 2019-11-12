@@ -1,4 +1,5 @@
 <resources >
+    <string name="app_name">"Обще"</string>
 
     <string name="grid">"сетка"</string>
     <string name="list">"Список"</string>
@@ -54,29 +55,6 @@
     colorMap[AppConstants.BLACK] = ApplicationBootstrap.context.resources.getColor(R.color.md_grey_black)
     colorMap[AppConstants.GREEN] = ApplicationBootstrap.context.resources.getColor(R.color.md_green_500)
     colorMap[AppConstants.PINK] = ApplicationBootstrap.context.resources.getColor(R.color.md_pink_500)-->
-
-
-
-    <string name="language_translations">
-языковые переводы используют систему, нажмите здесь, чтобы помочь нам в переводах</string>
-
-    <string name="watch_video">Посмотрите видео, чтобы продолжить игру</string>
-    <string name="great_going">Отлично!</string>
-
-    <string name="try_aging">Попробуй снова !!</string>
-    <string name="good">Отличная работа</string>
-    <string name="great_job">Отличная работа</string>
-    <string name="wonderful">Замечательный</string>
-    <string name="excellent">Потрясающие!! Отлично идет</string>
-
-    <string name="you_have_completed">Вы + прошли + %1$s + уровней</string>
-
-    <string name="level_completed">Уровень пройден</string>
-    <string name="next_level">Следующий уровень</string>
-    <string name="next">Следующий</string>
-
-    <string name="divisible_by_title">Делится на</string>
-
 
 
 
