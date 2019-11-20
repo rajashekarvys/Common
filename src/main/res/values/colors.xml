@@ -5,7 +5,7 @@
     <color name="divider_grey">#40808080</color>
     <color name="gradient_grey_start">#CC000000</color>
     <color name="trasperent_black">#54000000</color>
-    <color name="trasperent_black_low">#00000000</color>
+    <color name="trasperent_black_low">#10000000</color>
     <color name="trasperent_black_center">#24000000</color>
     <color name="trasperent_White">#0065A3</color>
 

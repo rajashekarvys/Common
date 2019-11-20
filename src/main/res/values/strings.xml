@@ -38,8 +38,7 @@
     <string name="reaming_numbers"> Reaming left: %1$s</string>
     <string name="language">Language</string>
 
-    <!--    newly added-->
-    <string name="rate_us_dialog" >Rate your experience</string>
+    <string name="rate_us_dialog">Rate your experience</string>
     <string name="not_good_enough" >Not good enough</string>
     <string name="yes_star" >Yes, 5 start</string>
     <string name="thanks_for_feedback" >Thanks for feedback</string>

@@ -13,6 +13,7 @@ import com.tinny.commons.R
 import com.tinny.commons.extentions.getStoreUrl
 import com.tinny.commons.extentions.launchViewIntent
 import com.tinny.commons.extentions.setFont
+import com.tinny.commons.extentions.setFontWithColor
 import kotlinx.android.synthetic.main.about_row.view.*
 import kotlinx.android.synthetic.main.activity_about.*
 import java.util.*
@@ -24,7 +25,6 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.moreApps ->{
-//                launchViewIntent("https://play.google.com/store/apps/dev?id=")
                 launchViewIntent("https://play.google.com/store/apps/developer?id=Tinnymobileapps")
             }
             R.id.rateUs ->{launchViewIntent("market://details?id=$packageName")}
@@ -53,10 +53,10 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         reportBugs.txtDesc.text =getString(R.string.report_bug_desc)
         setupCopyright()
 
-        moreApps.txtIcon.setFont(this,getString(R.string.f_more_apps),"icomoon_common.ttf")
-        rateUs.txtIcon.setFont(this,getString(R.string.f_full_star),"icomoon_common.ttf")
-        share.txtIcon.setFont(this,getString(R.string.f_fav),"icomoon_common.ttf")
-        reportBugs.txtIcon.setFont(this,getString(R.string.f_bug),"icomoon_common.ttf")
+        moreApps.txtIcon.setFontWithColor(this, getString(R.string.f_more_apps), "icomoon_common.ttf", resources.getColor(R.color.md_grey_black))
+        rateUs.txtIcon.setFontWithColor(this, getString(R.string.f_full_star), "icomoon_common.ttf", resources.getColor(R.color.md_grey_black))
+        share.txtIcon.setFontWithColor(this, getString(R.string.f_fav), "icomoon_common.ttf", resources.getColor(R.color.md_grey_black))
+        reportBugs.txtIcon.setFontWithColor(this, getString(R.string.f_bug), "icomoon_common.ttf", resources.getColor(R.color.md_grey_black))
 
         Toast.makeText(this,packageName,Toast.LENGTH_SHORT).show()
         moreApps.setOnClickListener(this)
