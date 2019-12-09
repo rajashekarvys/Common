@@ -43,7 +43,7 @@ fun Context.getMediaContent(path: String, uri: Uri): Uri? {
     try {
         cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
         cursor.use {
-            if (it.moveToFirst()) {
+            if (it!!.moveToFirst()) {
                 val id = it.getIntValue(MediaStore.Images.Media._ID).toString()
                 return Uri.withAppendedPath(uri, id)
             }
@@ -67,10 +67,10 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
 
 
 fun Context.getMimeTypeFromUri(uri: Uri): String {
-    var mimetype = uri.path.getMimeType()
+    var mimetype = uri.path!!.getMimeType()
     if (mimetype.isEmpty()) {
         try {
-            mimetype = contentResolver.getType(uri)
+            mimetype = contentResolver.getType(uri)!!
         } catch (e: IllegalStateException) {
         }
     }
