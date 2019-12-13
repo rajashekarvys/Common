@@ -67,4 +67,6 @@
     <dimen name="sp_42">42sp</dimen>
     <dimen name="sp_52">52sp</dimen>
 
+    <dimen name="sortText">58dp</dimen>
+
 </resources>

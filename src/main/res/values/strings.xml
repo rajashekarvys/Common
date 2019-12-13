@@ -81,6 +81,7 @@
     <string name="f_arrow_down" translatable="false">p</string>
     <string name="f_arrow_left" translatable="false">q</string>
     <string name="f_arrow_right" translatable="false">r</string>
+
     <string name="f_arrow_up" translatable="false">s</string>
     <string name="f_palette" translatable="false">t</string>
     <string name="f_pause_circle" translatable="false">u</string>
