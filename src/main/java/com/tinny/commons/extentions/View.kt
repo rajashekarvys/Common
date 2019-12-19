@@ -13,6 +13,7 @@ import android.animation.AnimatorListenerAdapter
 import android.opengl.ETC1.getHeight
 import androidx.core.view.ViewCompat.animate
 import android.R.attr.translationY
+import com.tinny.commons.helper.SafeClickListener
 
 
 fun View.isVisibile(): Boolean = visibility == View.VISIBLE
@@ -106,4 +107,11 @@ fun View.rotateViewWithAngle(from: Float, to: Float) {
     val rotate = ObjectAnimator.ofFloat(this, "rotation", from, to)
     rotate.duration = 200
     rotate.start()
+}
+
+fun View.setSafeOnClickListener(onSafeClick: (View) -> Unit) {
+    val safeClickListener = SafeClickListener {
+        onSafeClick(it)
+    }
+    setOnClickListener(safeClickListener)
 }
