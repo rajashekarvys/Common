@@ -58,7 +58,7 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         share.txtIcon.setFontWithColor(this, getString(R.string.f_fav), "icomoon_common.ttf", resources.getColor(R.color.md_grey_black))
         reportBugs.txtIcon.setFontWithColor(this, getString(R.string.f_bug), "icomoon_common.ttf", resources.getColor(R.color.md_grey_black))
 
-        Toast.makeText(this,packageName,Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this,packageName,Toast.LENGTH_SHORT).show()
         moreApps.setOnClickListener(this)
         rateUs.setOnClickListener(this)
         share.setOnClickListener(this)
