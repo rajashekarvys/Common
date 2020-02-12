@@ -110,6 +110,7 @@
     <string name="f_full_star" translatable="false">K</string>
     <string name="f_done_full_circle" translatable="false">Z</string>
     <string name="f_done_circle" translatable="false">z</string>
+    <string name="f_lock" translatable="false">1</string>
 
     <string name="blue" translatable="false">BLUE</string>
     <string name="red" translatable="false">RED</string>
