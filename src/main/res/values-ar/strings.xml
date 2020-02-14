@@ -26,9 +26,7 @@
     <string name="share_text">"مرحبًا ، تعال وانظر تحقق من %1$s على %2$s"</string>
     <string name="invite_via">"دعوة عبر"</string>
     <string name="copyright">"v %1$s \ n حقوق النشر © Tinny Mobile Apps %2$d"</string>
-
-
-
+    <string name="language">لغة</string>
     <string name="daily_training">"تذكير التدريب اليومي"</string>
     <string name="daily_time">"ذكرني على %1$s"</string>
     <string name="sound_when_playing">"الصوت عند اللعب"</string>
