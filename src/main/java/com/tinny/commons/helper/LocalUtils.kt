@@ -7,6 +7,9 @@ import android.content.res.Resources
 import android.os.Build
 import android.preference.PreferenceManager
 import java.util.*
+import android.util.DisplayMetrics
+
+
 
 
 object LocalUtils {
