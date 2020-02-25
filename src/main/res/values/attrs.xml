@@ -58,6 +58,11 @@
         <attr name="strokeWidth" format="float" />
         <attr name="progress" format="float" />
         <attr name="maxProgress" format="float" />
+    </declare-styleable>
 
+
+    <declare-styleable name="FlexBoxLayout">
+        <attr name="horizontalSpacing" format="dimension"/>
+        <attr name="verticalSpacing" format="dimension"/>
     </declare-styleable>
 </resources>

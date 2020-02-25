@@ -19,6 +19,11 @@ import java.util.*
  * Can easily swipe card left or right
  * */
 
+/**
+ * This view is used to place the view in stack manner user can see one card on top of another.
+ * Can easily swipe card left or right
+ * */
+
 class SwipeStack @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
     ViewGroup(context, attrs, defStyleAttr) {
 
