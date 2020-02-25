@@ -4,7 +4,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.tinny.commons.Intent_AppIcon
 import com.tinny.commons.Intent_AppName
@@ -12,7 +11,6 @@ import com.tinny.commons.Intent_AppVesion
 import com.tinny.commons.R
 import com.tinny.commons.extentions.getStoreUrl
 import com.tinny.commons.extentions.launchViewIntent
-import com.tinny.commons.extentions.setFont
 import com.tinny.commons.extentions.setFontWithColor
 import kotlinx.android.synthetic.main.about_row.view.*
 import kotlinx.android.synthetic.main.activity_about.*
@@ -53,10 +51,10 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         reportBugs.txtDesc.text =getString(R.string.report_bug_desc)
         setupCopyright()
 
-        moreApps.txtIcon.setFontWithColor(this, getString(R.string.f_more_apps), "icomoon_common.ttf", resources.getColor(R.color.md_grey_black))
-        rateUs.txtIcon.setFontWithColor(this, getString(R.string.f_full_star), "icomoon_common.ttf", resources.getColor(R.color.md_grey_black))
-        share.txtIcon.setFontWithColor(this, getString(R.string.f_fav), "icomoon_common.ttf", resources.getColor(R.color.md_grey_black))
-        reportBugs.txtIcon.setFontWithColor(this, getString(R.string.f_bug), "icomoon_common.ttf", resources.getColor(R.color.md_grey_black))
+        moreApps.txtIcon.setFontWithColor(this, getString(R.string.f_more_apps), "", resources.getColor(R.color.md_grey_black))
+        rateUs.txtIcon.setFontWithColor(this, getString(R.string.f_full_star), "", resources.getColor(R.color.md_grey_black))
+        share.txtIcon.setFontWithColor(this, getString(R.string.f_fav), "", resources.getColor(R.color.md_grey_black))
+        reportBugs.txtIcon.setFontWithColor(this, getString(R.string.f_bug), "", resources.getColor(R.color.md_grey_black))
 
 //        Toast.makeText(this,packageName,Toast.LENGTH_SHORT).show()
         moreApps.setOnClickListener(this)

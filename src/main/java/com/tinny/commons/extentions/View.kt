@@ -1,18 +1,15 @@
 package com.tinny.commons.extentions
 
+import android.R
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
 import android.animation.ObjectAnimator
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.inputmethod.InputMethodManager
-import android.R
-import android.transition.Fade
-import android.transition.Transition
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
-import android.opengl.ETC1.getHeight
-import androidx.core.view.ViewCompat.animate
-import android.R.attr.translationY
+import androidx.core.graphics.drawable.DrawableCompat
 import com.tinny.commons.helper.SafeClickListener
 
 
@@ -114,4 +111,9 @@ fun View.setSafeOnClickListener(onSafeClick: (View) -> Unit) {
         onSafeClick(it)
     }
     setOnClickListener(safeClickListener)
+}
+
+fun View.chnageDrawableColor(drawable: Drawable,color:Int){
+    val wrappedDrawable: Drawable = DrawableCompat.wrap(drawable)
+    DrawableCompat.setTint(wrappedDrawable, color)
 }

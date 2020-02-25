@@ -62,7 +62,8 @@
     <dimen name="fastscroll_scrollbar_margin_bottom">8dp</dimen>
     <dimen name="fastscroll_scrollbar_padding_start">8dp</dimen>
     <dimen name="fastscroll_scrollbar_padding_end">8dp</dimen>
-
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
     <dimen name="sp_32">32sp</dimen>
     <dimen name="sp_42">42sp</dimen>
     <dimen name="sp_52">52sp</dimen>

@@ -4,11 +4,17 @@ fun msToMinSec(durationInMillis: Long): String {
     val millis = (durationInMillis % 1000) / 10
     val second = durationInMillis / 1000 % 60
     val minute = durationInMillis / (1000 * 60) % 60
-    return if (minute==0L){
+    return if (minute == 0L) {
         String.format("%02d:%02d", second, millis)
-    }else{
+    } else {
         String.format("%02d:%02d:%02d", minute, second, millis)
     }
+}
+
+fun msToMinSecs(durationInMillis: Long): String {
+    val second = durationInMillis / 1000 % 60
+    val minute = durationInMillis / (1000 * 60) % 60
+    return String.format("%02d:%02d", minute, second)
 }
 
 fun minSecToMs(time: String): String {
