@@ -130,6 +130,5 @@
     <string name="pora" translatable="false">português</string>
     <string name="russain" translatable="false">русский язык</string>
 
-
-
+    <string name="language_translations">Language translations are using System, tap here to help us on translations</string>
 </resources>

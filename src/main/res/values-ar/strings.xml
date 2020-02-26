@@ -1,5 +1,4 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">"المشاعات"</string>
 
     <string name="grid">"جريد"</string>
     <string name="list">"قائمة"</string>
@@ -41,6 +40,7 @@
     <string name="not_good_enough">"ليس جيدا بما فيه الكفاية"</string>
     <string name="yes_star">"نعم ، 5 البداية"</string>
     <string name="thanks_for_feedback">"شكرا لملاحظاتك"</string>
-
+    <string name="language_translations">
+            تستخدم ترجمات اللغة نظام ، انقر هنا لمساعدتنا في الترجمة</string>
 
 </resources>

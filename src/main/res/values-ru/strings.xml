@@ -1,5 +1,4 @@
 <resources >
-    <string name="app_name">"Обще"</string>
 
     <string name="grid">"сетка"</string>
     <string name="list">"Список"</string>
@@ -58,4 +57,6 @@
 
 
 
+    <string name="language_translations">
+языковые переводы используют систему, нажмите здесь, чтобы помочь нам в переводах</string>
 </resources>
