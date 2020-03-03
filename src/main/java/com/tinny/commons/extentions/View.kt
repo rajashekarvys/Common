@@ -113,7 +113,7 @@ fun View.setSafeOnClickListener(onSafeClick: (View) -> Unit) {
     setOnClickListener(safeClickListener)
 }
 
-fun View.chnageDrawableColor(drawable: Drawable,color:Int){
+fun View.changeDrawableColor(drawable: Drawable,color:Int){
     val wrappedDrawable: Drawable = DrawableCompat.wrap(drawable)
     DrawableCompat.setTint(wrappedDrawable, color)
 }
