@@ -18,8 +18,6 @@ import java.util.*
 
 class AboutActivity : AppCompatActivity(),View.OnClickListener {
 
-
-//    I am new 2.0 Yes 
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.moreApps ->{
