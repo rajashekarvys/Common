@@ -33,7 +33,7 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
 
-        txtAppName.text = getString(R.string.app_name)
+//        txtAppName.text = getString(R.string.app_name)
         imgApp.setImageResource(intent.getIntExtra(Intent_AppIcon,0))
 
         moreApps.txtTitle.text = getString(R.string.more_apps)
