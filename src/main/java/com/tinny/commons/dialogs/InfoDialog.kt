@@ -22,6 +22,7 @@ class InfoDialog(activity: Activity, list: ArrayList<InfoData>, title: String) :
             .setView(view)
             .setPositiveButton(activity.getString(R.string.ok), this)
             .setTitle(title)
+
             .create().show()
 
     }

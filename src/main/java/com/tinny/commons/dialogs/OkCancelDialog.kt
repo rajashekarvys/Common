@@ -11,6 +11,7 @@ class OkCancelDialog(
     title: String,
     positiveButtonText: String = activity.getString(R.string.ok),
     negativeButtonText: String = activity.getString(R.string.cancel),
+    cancelable:Boolean = true,
     val callback: (value:Int) -> Unit
 ) : DialogInterface.OnClickListener {
 
@@ -20,6 +21,7 @@ class OkCancelDialog(
             .setNegativeButton(negativeButtonText, this)
             .setMessage(message)
             .setTitle(title)
+            .setCancelable(cancelable)
             .create().show()
     }
 
