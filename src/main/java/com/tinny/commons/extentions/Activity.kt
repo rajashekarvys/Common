@@ -96,11 +96,12 @@ fun Activity.shareIntent(path: String, applicationId: String) {
 
 }
 
-fun Activity.lauchAboutUs(icon:Int,appName:String,packageName:String,appVersion:String){
+fun Activity.lauchAboutUs(icon:Int, appName:String, packageName:String, appVersion:String, showTranslation:Boolean = true){
     val intent = Intent(this,AboutActivity::class.java).apply {
         putExtra(Intent_AppIcon,icon)
         putExtra(Intent_AppPACKAGENAME,packageName)
         putExtra(Intent_AppName,appName)
+        putExtra(Intent_Translation,showTranslation)
         putExtra(Intent_AppVesion,appVersion)
 
     }

@@ -22,6 +22,8 @@ const val TYPE_VIDEOS = 2
 fun isOnMainThread() = Looper.myLooper() == Looper.getMainLooper()
 
 const val Intent_AppName = "AN"
+const val Intent_Translation = "Trans"
+
 const val Intent_AppVesion = "AV"
 const val Test = "aa"
 

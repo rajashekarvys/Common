@@ -64,6 +64,7 @@
             layout="@layout/about_row" />
 
         <RelativeLayout
+            android:id="@+id/rrTrans"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="80dp">

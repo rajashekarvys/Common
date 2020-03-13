@@ -5,13 +5,8 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.tinny.commons.Intent_AppIcon
-import com.tinny.commons.Intent_AppName
-import com.tinny.commons.Intent_AppVesion
-import com.tinny.commons.R
-import com.tinny.commons.extentions.getStoreUrl
-import com.tinny.commons.extentions.launchViewIntent
-import com.tinny.commons.extentions.setFontWithColor
+import com.tinny.commons.*
+import com.tinny.commons.extentions.*
 import com.tinny.commons.helper.CommonConstants
 import com.tinny.commons.helper.CommonTextIcons
 import kotlinx.android.synthetic.main.about_row.view.*
@@ -50,6 +45,12 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         reportBugs.txtTitle.text = getString(R.string.report_bug)
         reportBugs.txtDesc.text =getString(R.string.report_bug_desc)
         setupCopyright()
+
+        if (intent.getBooleanExtra(Intent_Translation,true)){
+            rrTrans.makeVisible()
+        }else{
+            rrTrans.makeGone()
+        }
 
         moreApps.txtIcon.setFontWithColor(this, getString(R.string.f_more_apps), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
         rateUs.txtIcon.setFontWithColor(this, getString(R.string.f_full_star), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
