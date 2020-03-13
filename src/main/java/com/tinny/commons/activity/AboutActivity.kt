@@ -12,6 +12,8 @@ import com.tinny.commons.R
 import com.tinny.commons.extentions.getStoreUrl
 import com.tinny.commons.extentions.launchViewIntent
 import com.tinny.commons.extentions.setFontWithColor
+import com.tinny.commons.helper.CommonConstants
+import com.tinny.commons.helper.CommonTextIcons
 import kotlinx.android.synthetic.main.about_row.view.*
 import kotlinx.android.synthetic.main.activity_about.*
 import java.util.*
@@ -33,7 +35,7 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
 
-//        txtAppName.text = getString(R.string.app_name)
+        txtAppName.text = intent.getStringExtra(Intent_AppName)
         imgApp.setImageResource(intent.getIntExtra(Intent_AppIcon,0))
 
         moreApps.txtTitle.text = getString(R.string.more_apps)
@@ -49,11 +51,21 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         reportBugs.txtDesc.text =getString(R.string.report_bug_desc)
         setupCopyright()
 
-        moreApps.txtIcon.setFontWithColor(this, getString(R.string.f_more_apps), "", resources.getColor(R.color.md_grey_black))
-        rateUs.txtIcon.setFontWithColor(this, getString(R.string.f_full_star), "", resources.getColor(R.color.md_grey_black))
-        share.txtIcon.setFontWithColor(this, getString(R.string.f_fav), "", resources.getColor(R.color.md_grey_black))
-        reportBugs.txtIcon.setFontWithColor(this, getString(R.string.f_bug), "", resources.getColor(R.color.md_grey_black))
+        moreApps.txtIcon.setFontWithColor(this, getString(R.string.f_more_apps), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
+        rateUs.txtIcon.setFontWithColor(this, getString(R.string.f_full_star), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
+        share.txtIcon.setFontWithColor(this, getString(R.string.f_fav), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
+        reportBugs.txtIcon.setFontWithColor(this, getString(R.string.f_bug), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
+        txtIconTran.setFontWithColor(this, CommonTextIcons.F_Translation, CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
 
+
+
+        txtTranHelp.setOnClickListener {
+            val mIntent = Intent(Intent.ACTION_SENDTO)
+            mIntent.data = Uri.parse("mailto:")
+            mIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("tinnymobileapps@gmail.com"))
+            mIntent.putExtra(Intent.EXTRA_SUBJECT, intent.getStringExtra(Intent_AppName) + " (v-"+ intent.getStringExtra(Intent_AppVesion) + " -- "+ "Helping in text translation")
+            startActivity(Intent.createChooser(mIntent, "Send Email"))
+        }
 //        Toast.makeText(this,packageName,Toast.LENGTH_SHORT).show()
         moreApps.setOnClickListener(this)
         rateUs.setOnClickListener(this)

@@ -131,4 +131,6 @@
     <string name="russain" translatable="false">русский язык</string>
 
     <string name="language_translations">Language translations are using System, tap here to help us on translations</string>
+
+    <string name="translations" translatable="false">Translations</string>
 </resources>
