@@ -15,10 +15,13 @@ import java.util.*
 
 class AboutActivity : AppCompatActivity(),View.OnClickListener {
 
+    val emailId= "mobilepuzzlesgames@gmail.com"
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.moreApps ->{
-                launchViewIntent("https://play.google.com/store/apps/developer?id=Tinnymobileapps")
+//                launchViewIntent("https://play.google.com/store/apps/developer?id=Tinnymobileapps")
+                launchViewIntent("https://play.google.com/store/apps/developer?id=Simple+Puzzle+games")
+
             }
             R.id.rateUs ->{launchViewIntent("market://details?id=$packageName")}
             R.id.reportBugs ->{reportBug()}
@@ -30,6 +33,7 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
 
+        intent.getStringExtra(Intent_AppName)
         txtAppName.text = intent.getStringExtra(Intent_AppName)
         imgApp.setImageResource(intent.getIntExtra(Intent_AppIcon,0))
 
@@ -63,7 +67,7 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
         txtTranHelp.setOnClickListener {
             val mIntent = Intent(Intent.ACTION_SENDTO)
             mIntent.data = Uri.parse("mailto:")
-            mIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("tinnymobileapps@gmail.com"))
+            mIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(emailId))
             mIntent.putExtra(Intent.EXTRA_SUBJECT, intent.getStringExtra(Intent_AppName) + " (v-"+ intent.getStringExtra(Intent_AppVesion) + " -- "+ "Helping in text translation")
             startActivity(Intent.createChooser(mIntent, "Send Email"))
         }
@@ -88,13 +92,13 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
     private fun setupCopyright() {
         val versionName = intent.getStringExtra(Intent_AppVesion)
         val year = Calendar.getInstance().get(Calendar.YEAR)
-        txtCopyrights.text = String.format(getString(R.string.copyright), versionName, year)
+        txtCopyrights.text = String.format(getString(R.string.copyright1), versionName, year)
     }
 
     private fun reportBug(){
         val mIntent = Intent(Intent.ACTION_SENDTO)
         mIntent.data = Uri.parse("mailto:")
-        mIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("tinnymobileapps@gmail.com"))
+        mIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(emailId))
         mIntent.putExtra(Intent.EXTRA_SUBJECT, intent.getStringExtra(Intent_AppName) + " (v-"+ intent.getStringExtra(Intent_AppVesion) + " -- "+ getString(R.string.report_bug_desc))
         startActivity(Intent.createChooser(mIntent, "Send Email"))
     }
