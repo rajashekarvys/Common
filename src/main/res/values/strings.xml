@@ -58,10 +58,10 @@
 
 
     <string name="try_aging" translatable="false">Try again</string>
-    <string name="good" translatable="false">Good</string>
-    <string name="excellent" translatable="false">Excellent</string>
+    <string name="good" translatable="false">Great Going</string>
+    <string name="excellent" translatable="false">Awesome you have completed the level</string>
     <string name="next_level" translatable="false">Next Level</string>
-
+    <string name="next" translatable="false">Next</string>
 
     <string name="f_contact_circle" translatable="false">a</string>
     <string name="f_add_circle" translatable="false">b</string>

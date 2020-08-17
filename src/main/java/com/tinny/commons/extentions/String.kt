@@ -18,8 +18,28 @@ fun String.getFilenameExtension() = substring(lastIndexOf(".") + 1)
 
 fun String.areDigitsOnly() = matches(Regex("[0-9]+"))
 
+fun String.removeLast(): String {
+    if (length > 0) {
+        return substring(0, length - 1)
+    }
+    return this
+}
+
 fun String.getParentPath() = removeSuffix("/${getFilenameFromPath()}")
 
+
+fun String.replaceAlternativeChars():String{
+    var data = StringBuffer()
+    var chars = toCharArray()
+    for(i in chars.indices){
+        if (i%2 == 0){
+            data.append("*")
+        }else{
+            data.append(chars[i])
+        }
+    }
+    return data.toString()
+}
 
 fun String.getVideoDuration(): Int {
     var seconds = 0
@@ -634,4 +654,5 @@ fun String.getMimeType(): String {
         put("z", "application/x-compress")
         put("zip", "application/zip")
     }
-    return typesMap[getFilenameExtension().toLowerCase()] ?: ""}
+    return typesMap[getFilenameExtension().toLowerCase()] ?: ""
+}
