@@ -3,8 +3,9 @@ package com.tinny.commons.views
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatTextView
 
-class MySqureTextView : TextView {
+class MySqureTextView : AppCompatTextView {
 
     constructor(context: Context) : super(context)
 

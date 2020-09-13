@@ -48,14 +48,14 @@
         <attr name="disable_hw_acceleration" format="boolean"/>
     </declare-styleable>
     <declare-styleable name="HexagonProgress">
-        <attr name="progressColor" format="color" />
+        <attr name="HexaProgressColor" format="color" />
         <attr name="textColor" format="color" />
         <attr name="fillColor" format="color" />
         <attr name="borderColor" format="color" />
         <attr name="hexaTextSize" format="float" />
         <attr name="text" format="string" />
         <attr name="borderRadius" format="float" />
-        <attr name="strokeWidth" format="float" />
+        <attr name="strokeWidthCommon" format="float" />
         <attr name="progress" format="float" />
         <attr name="maxProgress" format="float" />
     </declare-styleable>
@@ -64,5 +64,22 @@
     <declare-styleable name="FlexBoxLayout">
         <attr name="horizontalSpacing" format="dimension"/>
         <attr name="verticalSpacing" format="dimension"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleProgressBarWithText">
+        <attr name="TProgressColor" format="color"/>
+        <attr name="TbackgroundColor" format="color"/>
+        <attr name="TstrokeWidthCP" format="float"/>
+        <attr name="TbackgroundWidth" format="float"/>
+        <attr name="TroundedCorners" format="boolean"/>
+        <attr name="TmaxValue" format="float"/>
+        <attr name="TprogressTextColor" format="color"/>
+        <attr name="TpaintStyle" format="integer"/>
+        <attr name="TtextSize" format="dimension"/>
+        <attr name="Tcenter" format="boolean"/>
+        <attr name="TprogressText" format="string"/>
+        <attr name="Tsuffix" format="string"/>
+        <attr name="Tprefix" format="string"/>
     </declare-styleable>
 </resources>

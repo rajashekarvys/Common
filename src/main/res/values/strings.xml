@@ -57,11 +57,14 @@
 
 
 
-    <string name="try_aging" translatable="false">Try again</string>
+    <string name="try_aging" translatable="false">Try again!!</string>
     <string name="good" translatable="false">Great Going</string>
-    <string name="excellent" translatable="false">Awesome you have completed the level</string>
+    <string name="level_completed" translatable="false">Level completed</string>
+    <string name="excellent" translatable="false">Awesome!! Great going </string>
     <string name="next_level" translatable="false">Next Level</string>
     <string name="next" translatable="false">Next</string>
+
+    <string name="divisible_by_title" translatable="false">Divisible by</string>
 
     <string name="f_contact_circle" translatable="false">a</string>
     <string name="f_add_circle" translatable="false">b</string>
@@ -134,4 +137,10 @@
     <string name="language_translations">Language translations are using System, tap here to help us on translations</string>
 
     <string name="translations" translatable="false">Translations</string>
+
+    <!--Add translatable-->
+    <string name="watch_video" translatable="false">Watch video to continue the game</string>
+    <string name="great_going" translatable="false">Great going</string>
+
+
 </resources>
