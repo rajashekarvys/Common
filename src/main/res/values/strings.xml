@@ -58,9 +58,12 @@
 
 
     <string name="try_aging" translatable="false">Try again!!</string>
-    <string name="good" translatable="false">Great Going</string>
-    <string name="level_completed" translatable="false">Level completed</string>
+    <string name="good" translatable="false">Great Job </string>
+    <string name="great_job" translatable="false">Great Job </string>
+    <string name="wonderful" translatable="false">Wonderful</string>
     <string name="excellent" translatable="false">Awesome!! Great going </string>
+
+    <string name="level_completed" translatable="false">Level completed</string>
     <string name="next_level" translatable="false">Next Level</string>
     <string name="next" translatable="false">Next</string>
 
