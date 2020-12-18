@@ -70,8 +70,10 @@
     <dimen name="sp_32">32sp</dimen>
     <dimen name="sp_42">42sp</dimen>
     <dimen name="sp_52">52sp</dimen>
+    <dimen name="sp_48">48dp</dimen>
+    <dimen name="sortText">52dp</dimen>
+    <dimen name="sp_58">58dp</dimen>
 
-    <dimen name="sortText">58dp</dimen>
     <dimen name="sp_68">68dp</dimen>
 
 </resources>
