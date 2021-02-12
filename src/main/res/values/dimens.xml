@@ -5,6 +5,8 @@
     <dimen name="normal_margin">12dp</dimen>
     <dimen name="normal_range_margin">10dp</dimen>
     <dimen name="activity_margin">16dp</dimen>
+    <dimen name="sp16">18sp</dimen>
+
     <dimen name="bigger_margin">20dp</dimen>
     <dimen name="big_margin">24dp</dimen>
     <dimen name="txt_top_icon_size">28sp</dimen>

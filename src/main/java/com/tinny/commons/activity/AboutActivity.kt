@@ -15,12 +15,12 @@ import java.util.*
 
 class AboutActivity : AppCompatActivity(),View.OnClickListener {
 
-    val emailId= "mobilepuzzlesgames@gmail.com"
+    val emailId= "tinnymobileapps@gmail.com"
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.moreApps ->{
-//                launchViewIntent("https://play.google.com/store/apps/developer?id=Tinnymobileapps")
-                launchViewIntent("https://play.google.com/store/apps/developer?id=Simple+Puzzle+games")
+               launchViewIntent("https://play.google.com/store/apps/developer?id=Tinnymobileapps")
+//                launchViewIntent("https://play.google.com/store/apps/developer?id=Simple+Puzzle+games")
 
             }
             R.id.rateUs ->{launchViewIntent("market://details?id=$packageName")}

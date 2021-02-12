@@ -24,7 +24,7 @@
     <string name="share_text">Hey, come check out %1$s at %2$s</string>
     <string name="invite_via">Invite via</string>
     <string name="copyright">v %1$s \nCopyright © Tinny Mobile Apps %2$d</string>
-    <string name="copyright1" translatable="false">v %1$s \nCopyright © Simple Puzzle Games %2$d</string>
+    <string name="copyright1" translatable="false">v %1$s \nCopyright © Tinnymobileapps %2$d</string>
 
 
 
@@ -45,6 +45,7 @@
     <string name="rate_us_dilog">Please take a moment to leave your feedback. \n \n Thank you for support :)</string>
 
 
+    <string name="please_wait" translatable="false">Please wait</string>
     <!--colorMap[AppConstants.BLUE] = ColorsData(ApplicationBootstrap.context.resources.getColor(R.color.md_blue_500),getString(R.string.blue))
     colorMap[AppConstants.RED] = ApplicationBootstrap.context.resources.getColor(R.color.md_red_500)
     colorMap[AppConstants.BROWN] = ApplicationBootstrap.context.resources.getColor(R.color.md_brown_500)
@@ -54,20 +55,6 @@
     colorMap[AppConstants.BLACK] = ApplicationBootstrap.context.resources.getColor(R.color.md_grey_black)
     colorMap[AppConstants.GREEN] = ApplicationBootstrap.context.resources.getColor(R.color.md_green_500)
     colorMap[AppConstants.PINK] = ApplicationBootstrap.context.resources.getColor(R.color.md_pink_500)-->
-
-
-
-    <string name="try_aging" translatable="false">Try again!!</string>
-    <string name="good" translatable="false">Great Job </string>
-    <string name="great_job" translatable="false">Great Job </string>
-    <string name="wonderful" translatable="false">Wonderful</string>
-    <string name="excellent" translatable="false">Awesome!! Great going </string>
-
-    <string name="level_completed" translatable="false">Level completed</string>
-    <string name="next_level" translatable="false">Next Level</string>
-    <string name="next" translatable="false">Next</string>
-
-    <string name="divisible_by_title" translatable="false">Divisible by</string>
 
     <string name="f_contact_circle" translatable="false">a</string>
     <string name="f_add_circle" translatable="false">b</string>
@@ -126,6 +113,8 @@
     <string name="BLACK" translatable="false">BLACK</string>
     <string name="GREEN" translatable="false">GREEN</string>
     <string name="PINK" translatable="false">PINK</string>
+    <string name="GREY" translatable="false">GREY</string>
+
 
     <string name="german" translatable="false">Deutsch</string>
     <string name="spanish" translatable="false">Español</string>
@@ -142,8 +131,23 @@
     <string name="translations" translatable="false">Translations</string>
 
     <!--Add translatable-->
-    <string name="watch_video" translatable="false">Watch video to continue the game</string>
-    <string name="great_going" translatable="false">Great going</string>
+    <string name="watch_video" >Watch video to continue the game</string>
+    <string name="great_going" >Great going !!</string>
+
+    <string name="try_aging">Try again !!</string>
+    <string name="good" >Great Job </string>
+    <string name="great_job">Great Job </string>
+    <string name="wonderful">Wonderful</string>
+    <string name="excellent">Awesome!! Great going </string>
+
+    <string name="you_have_completed">You have completed %1$s levels</string>
+
+    <string name="level_completed">Level completed</string>
+    <string name="next_level">Next Level</string>
+    <string name="next" >Next</string>
+
+    <string name="divisible_by_title" >Divisible by</string>
+
 
 
 </resources>
