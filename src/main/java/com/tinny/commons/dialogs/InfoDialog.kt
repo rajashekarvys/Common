@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
 import com.tinny.commons.R
-import kotlinx.android.synthetic.main.parentview.view.*
 import kotlinx.android.synthetic.main.about_row.view.*
+import kotlinx.android.synthetic.main.parentview.view.*
 
 class InfoDialog(activity: Activity, list: ArrayList<InfoData>, title: String) : DialogInterface.OnClickListener {
 

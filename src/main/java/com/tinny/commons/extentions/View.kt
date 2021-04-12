@@ -1,6 +1,5 @@
 package com.tinny.commons.extentions
 
-import android.R
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ObjectAnimator

@@ -25,7 +25,19 @@ fun msToMinSecsAddText(durationInMillis: Long): String {
     finalData = data[0] + "m:"+data[1]+"s"
     return finalData
 }
+fun msToMillSecsAddText(durationInMillis: Long): String {
+    val millis = (durationInMillis % 1000) / 10
+    val second = durationInMillis / 1000 % 60
+    val minute = durationInMillis / (1000 * 60) % 60
 
+    return if (minute == 0L) {
+        val data =  String.format("%02d:%02d", second, millis).split(":")
+         data[0] + "s: "+data[1]+"ms"
+    } else {
+        val data =  String.format("%02d:%02d:%02d", minute, second, millis)
+        data[0] + "m: "+data[1]+"s " + data[2]+"ms"
+    }
+}
 fun minSecToMs(time: String): String {
 
 /*

@@ -1,7 +1,6 @@
 package com.tinny.commons.dialogs
 
 import android.content.DialogInterface
-import android.os.Handler
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 

@@ -1,16 +1,14 @@
 package com.tinny.commons.extentions
 
 import android.content.Context
-import android.graphics.Color
 import android.graphics.Typeface
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.SpannableStringBuilder
-import android.text.style.StyleSpan
-import android.widget.TextView
-import androidx.appcompat.widget.AppCompatTextView
 import android.text.style.ForegroundColorSpan
 import android.text.style.RelativeSizeSpan
+import android.text.style.StyleSpan
+import android.widget.TextView
 
 
 fun TextView.textValue() = this.text.toString()
