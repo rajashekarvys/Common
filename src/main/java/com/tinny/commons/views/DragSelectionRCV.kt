@@ -29,10 +29,10 @@ class DragSelectionRCV: RecyclerView {
     private var hotspotOffsetTop = 0
     private var hotspotOffsetBottom = 0
 
-    private var hotspotTopBoundStart = 0
-    private var hotspotTopBoundEnd = 0
-    private var hotspotBottomBoundStart = 0
-    private var hotspotBottomBoundEnd = 0
+    private var hotspotTopBoundStart = 0f
+    private var hotspotTopBoundEnd = 0f
+    private var hotspotBottomBoundStart = 0f
+    private var hotspotBottomBoundEnd = 0f
     private var autoScrollVelocity = 0
 
     private var inTopHotspot = false
@@ -84,10 +84,10 @@ class DragSelectionRCV: RecyclerView {
     override fun onMeasure(widthSpec: Int, heightSpec: Int) {
         super.onMeasure(widthSpec, heightSpec)
         if (hotspotHeight > -1) {
-            hotspotTopBoundStart = hotspotOffsetTop
-            hotspotTopBoundEnd = hotspotOffsetTop + hotspotHeight
-            hotspotBottomBoundStart = measuredHeight - hotspotHeight - hotspotOffsetBottom
-            hotspotBottomBoundEnd = measuredHeight - hotspotOffsetBottom
+            hotspotTopBoundStart = hotspotOffsetTop.toFloat()
+            hotspotTopBoundEnd = hotspotOffsetTop + hotspotHeight.toFloat()
+            hotspotBottomBoundStart = measuredHeight - hotspotHeight - hotspotOffsetBottom.toFloat()
+            hotspotBottomBoundEnd = measuredHeight - hotspotOffsetBottom.toFloat()
         }
     }
 

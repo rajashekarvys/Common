@@ -1,4 +1,4 @@
-package com.example.commons.views
+package com.tinny.commons.views
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter

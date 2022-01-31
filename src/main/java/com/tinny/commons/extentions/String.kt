@@ -46,7 +46,9 @@ fun String.getVideoDuration(): Int {
     try {
         val retriever = MediaMetadataRetriever()
         retriever.setDataSource(this)
-        seconds = Math.round(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION).toInt() / 1000f)
+        /*seconds =
+            Math.round((retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)).toString() / 1000f)
+                .toInt()*/
     } catch (e: Exception) {
     }
     return seconds
