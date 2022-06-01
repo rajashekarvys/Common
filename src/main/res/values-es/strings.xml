@@ -1,0 +1,77 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="grid">"Cuadrícula"</string>
+    <string name="list">"Lista"</string>
+
+    <string name="app_not_found">"Aplicación no encontrada"</string>
+    <string name="not_able_to_share" >"No puedo compartir"</string>
+    <string name="set_as">"Establecer como"</string>
+    <string name="open_with">"Abrir con"</string>
+    <string name="share_via">"Compartir via"</string>
+    <string name="ok">"Okay"</string>
+    <string name="cancel">"Cancelar"</string>
+    <string name="resume">"Currículum"</string>
+    <string name="restart">"Reiniciar"</string>
+    <string name="home">"Casa"</string>
+    <string name="more_apps">"Más aplicaciones"</string>
+    <string name="support">"Apoyo"</string>
+    <string name="report_bug">"Reportar un error"</string>
+    <string name="report_bug_desc">"Informar un error o solicitar nuevas funciones"</string>
+    <string name="rate_us">"Nos califica"</string>
+    <string name="rate_us_desc">"Déjalo como una calificación positiva si te gusta esta aplicación."</string>
+    <string name="more_apps_desc">"Mira más aplicaciones"</string>
+    <string name="share">"Invitar Amigos"</string>
+    <string name="share_desc">"Compartir aplicación con amigos"</string>
+    <string name="share_text">"Hola, echa un vistazo a %1$s en %2$s"</string>
+    <string name="invite_via">"Invitar a través de"</string>
+    <string name="copyright">"v %1$s \ nCopyright © Tinny Mobile Apps %2$d"</string>
+
+
+
+    <string name="daily_training">"Recordatorio diario de entrenamiento"</string>
+    <string name="daily_time">"Recuérdame en %1$s"</string>
+    <string name="sound_when_playing">"Sonido al jugar"</string>
+    <string name="vibrate">"Toque vibratorio en la vista"</string>
+
+    <string name="find_number">"Buscar número: %1$s "</string>
+    <string name="reaming_numbers">" Escariado a la izquierda: %1$s"</string>
+    <string name="language">Idioma</string>
+    <string name="loading_images">"Cargando imagenes"</string>
+    <string name="rate_us_dilog">"Tómese un momento para dejar sus comentarios. \n \n Gracias por tu apoyo :)"</string>
+    <string name="rate_us_dialog">"Califica tu experiencia"</string>
+    <string name="not_good_enough">"No es suficiente"</string>
+    <string name="yes_star">"Sí, 5 inicio"</string>
+    <string name="thanks_for_feedback">"Gracias por la retroalimentación"</string>
+    <!--colorMap[AppConstants.BLUE] = ColorsData(ApplicationBootstrap.context.resources.getColor(R.color.md_blue_500),getString(R.string.blue))
+    colorMap[AppConstants.RED] = ApplicationBootstrap.context.resources.getColor(R.color.md_red_500)
+    colorMap[AppConstants.BROWN] = ApplicationBootstrap.context.resources.getColor(R.color.md_brown_500)
+    colorMap[AppConstants.ORANGE] = ApplicationBootstrap.context.resources.getColor(R.color.md_orange_500)
+    colorMap[AppConstants.PERPUL] = ApplicationBootstrap.context.resources.getColor(R.color.md_purple_500)
+    colorMap[AppConstants.YELLOW] = ApplicationBootstrap.context.resources.getColor(R.color.md_yellow_500)
+    colorMap[AppConstants.BLACK] = ApplicationBootstrap.context.resources.getColor(R.color.md_grey_black)
+    colorMap[AppConstants.GREEN] = ApplicationBootstrap.context.resources.getColor(R.color.md_green_500)
+    colorMap[AppConstants.PINK] = ApplicationBootstrap.context.resources.getColor(R.color.md_pink_500)-->
+
+
+    <string name="language_translations">
+las traducciones de idiomas están usando el sistema, toque aquí para ayudarnos en las traducciones</string>
+
+    <string name="watch_video">Ver video para continuar el juego</string>
+    <string name="great_going">¡¡Genial !!</string>
+
+    <string name="try_aging">Inténtalo de nuevo !!</string>
+    <string name="good">Gran trabajo</string>
+    <string name="great_job">Gran trabajo</string>
+    <string name="wonderful">Maravilloso</string>
+    <string name="excellent">¡¡Increíble!! Buen camino</string>
+
+    <string name="you_have_completed">Has completado %1$s niveles</string>
+
+    <string name="level_completed">Nivel completado</string>
+    <string name="next_level">Siguiente nivel</string>
+    <string name="next">Siguiente</string>
+
+    <string name="divisible_by_title">Divisible por</string>
+
+
+</resources>

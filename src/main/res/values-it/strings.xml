@@ -1,0 +1,76 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="grid">"Griglia"</string>
+    <string name="list">"Elenco"</string>
+
+    <string name="app_not_found">"Applicazione non trovata"</string>
+    <string name="not_able_to_share" tools:ignore="ExtraTranslation">"Impossibile condividere"</string>
+    <string name="set_as">"Impostato come"</string>
+    <string name="open_with">"Aperto con"</string>
+    <string name="share_via">"Condividere tramite"</string>
+    <string name="ok">"ok"</string>
+    <string name="cancel">"Annulla"</string>
+    <string name="resume">"Curriculum vitae"</string>
+    <string name="restart">"Ricomincia"</string>
+    <string name="home">"Casa"</string>
+    <string name="more_apps">"Più applicazioni"</string>
+    <string name="support">"Supporto"</string>
+    <string name="report_bug">"Segnala un errore"</string>
+    <string name="report_bug_desc">"Segnala un bug o richiedi nuove funzionalità"</string>
+    <string name="rate_us">"Valutaci"</string>
+    <string name="rate_us_desc">"Lascia come una valutazione positiva se ti piace questa app."</string>
+    <string name="more_apps_desc">"Scopri altre app"</string>
+    <string name="share">"Invita amici
+"</string>
+    <string name="share_desc">"Condividi l'applicazione con gli amici"</string>
+    <string name="share_text">"Ehi, vieni a dare un'occhiata a %1$s a %2$s"</string>
+    <string name="invite_via">"Invita via"</string>
+    <string name="copyright">"v %1$s \ nCopyright © Tinny Mobile Apps %2$d"</string>
+
+
+
+    <string name="daily_training">"Promemoria di allenamento giornaliero"</string>
+    <string name="daily_time">"Ricordami a %1$s"</string>
+    <string name="sound_when_playing">"Suono durante la riproduzione"</string>
+    <string name="vibrate">"Vibrazione toccare sulla vista"</string>
+
+    <string name="find_number">"Trova il numero: %1$s "</string>
+    <string name="reaming_numbers">" Alesaggio a sinistra: %1$s"</string>
+    <string name="language">linguaggio</string>
+    <string name="loading_images">"Caricamento immagini"</string>
+    <string name="rate_us_dilog">"Ti preghiamo di dedicare un momento a lasciare il tuo feedback. \ n \ n Grazie per il supporto :)"</string>
+    <string name="rate_us_dialog">"Valuta la tua esperienza"</string>
+    <string name="not_good_enough">"Non buono abbastanza"</string>
+    <string name="yes_star">"Sì, 5 inizio"</string>
+    <string name="thanks_for_feedback">"Grazie per il feedback"</string>
+    <!--colorMap[AppConstants.BLUE] = ColorsData(ApplicationBootstrap.context.resources.getColor(R.color.md_blue_500),getString(R.string.blue))
+    colorMap[AppConstants.RED] = ApplicationBootstrap.context.resources.getColor(R.color.md_red_500)
+    colorMap[AppConstants.BROWN] = ApplicationBootstrap.context.resources.getColor(R.color.md_brown_500)
+    colorMap[AppConstants.ORANGE] = ApplicationBootstrap.context.resources.getColor(R.color.md_orange_500)
+    colorMap[AppConstants.PERPUL] = ApplicationBootstrap.context.resources.getColor(R.color.md_purple_500)
+    colorMap[AppConstants.YELLOW] = ApplicationBootstrap.context.resources.getColor(R.color.md_yellow_500)
+    colorMap[AppConstants.BLACK] = ApplicationBootstrap.context.resources.getColor(R.color.md_grey_black)
+    colorMap[AppConstants.GREEN] = ApplicationBootstrap.context.resources.getColor(R.color.md_green_500)
+    colorMap[AppConstants.PINK] = ApplicationBootstrap.context.resources.getColor(R.color.md_pink_500)-->
+
+
+    <string name="language_translations">
+le traduzioni linguistiche utilizzano il sistema, tocca qui per aiutarci nelle traduzioni</string>
+
+    <string name="watch_video">Guarda il video per continuare il gioco</string>
+    <string name="great_going">Fantastico !!</string>
+
+    <string name="try_aging">Riprova !!</string>
+    <string name="good">Ottimo lavoro</string>
+    <string name="great_job">Ottimo lavoro</string>
+    <string name="wonderful">Meraviglioso</string>
+    <string name="excellent">Eccezionale!! Ottimo lavoro</string>
+
+    <string name="you_have_completed">Hai + completato + %1$s + livelli</string>
+
+    <string name="level_completed">Livello completato</string>
+    <string name="next_level">Livello successivo</string>
+    <string name="next">Il prossimo</string>
+
+    <string name="divisible_by_title">Divisibile per</string>
+</resources>

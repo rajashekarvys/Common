@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_300"
+        android:orientation="vertical"
+        tools:context=".activity.AboutActivity">
+
+    <ImageView
+        android:id="@+id/imgApp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        tools:src="@drawable/ic_datejumper" />
+
+    <TextView
+        android:id="@+id/txtAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgApp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/md_grey_black_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="@string/cancel" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtAppName"
+        android:layout_margin="10dp"
+        android:background="@color/md_grey_white"
+        android:elevation="2dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtSupport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/support"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <include
+            android:id="@+id/moreApps"
+            layout="@layout/about_row" />
+
+        <include
+            android:id="@+id/reportBugs"
+            layout="@layout/about_row" />
+
+        <include
+            android:id="@+id/share"
+            layout="@layout/about_row" />
+
+        <include
+            android:id="@+id/rateUs"
+            layout="@layout/about_row" />
+
+        <RelativeLayout
+            android:id="@+id/rrTrans"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+
+            <TextView android:layout_width="wrap_content"
+                android:id="@+id/txtIconTran"
+                tools:text="a"
+                android:textSize="28sp"
+                android:layout_margin="10dp"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_toEndOf="@+id/txtIconTran"
+                android:text="@string/translations"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTran"
+                android:textColor="@color/md_grey_black_dark"
+                android:textSize="18sp"/>
+
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toEndOf="@+id/txtIconTran"
+                android:layout_below="@+id/txtTran"
+                android:id="@+id/txtTranHelp"
+                android:textColor="@color/md_grey_600_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/language_translations"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/txtCopyrights"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:gravity="bottom|center"
+            tools:text="jjkjkj" />
+    </LinearLayout>
+</RelativeLayout>

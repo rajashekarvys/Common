@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_rect"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:text="@string/great_going"
+                android:textColor="@color/md_green_600_dark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        <TextView
+                android:id="@+id/imgCancel"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp"
+                android:textSize="28sp" />
+    </RelativeLayout>
+
+    <com.tinny.commons.views.CircleProgressBarWithText
+            android:id="@+id/img"
+            app:TbackgroundWidth="5"
+            app:TstrokeWidthCP="5"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_below="@+id/header"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:TbackgroundColor="@color/md_grey_400"
+            android:max="500"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/rateus" />
+
+
+
+
+
+    <TextView
+            android:id="@+id/txtLife"
+            android:layout_centerHorizontal="true"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_below="@+id/header"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:textColor="@color/md_grey_black"
+            android:textSize="@dimen/sp_42" />
+
+    <TextView
+            android:textStyle="bold"
+            android:id="@+id/txtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="@string/watch_video"
+            android:textColor="@color/md_grey_black"
+            android:textSize="18sp" />
+
+
+    <TextView
+            android:layout_marginBottom="30dp"
+            android:id="@+id/btnWatchVideo"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_below="@+id/txtMessage"
+            android:layout_marginEnd="24dp"
+            android:layout_toStartOf="@+id/btnTryAgain"
+            android:background="@drawable/watch_video"
+            android:gravity="center"
+            android:text="1"
+
+            android:layout_marginTop="16dp"
+            android:textColor="@color/md_grey_700"
+            android:textSize="@dimen/sp_32" />
+
+    <TextView
+            android:id="@+id/btnTryAgain"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_below="@+id/txtMessage"
+            android:layout_alignEnd="@+id/img"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="-32dp"
+            android:background="@drawable/circle_white"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:text="@string/yes_star"
+            android:textColor="@color/md_green_500_dark"
+            android:textSize="@dimen/sp_32"
+            android:textStyle="bold" />
+
+</RelativeLayout>

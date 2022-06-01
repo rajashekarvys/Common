@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:elevation="5dp"
+    android:background="@drawable/white_sqaure_with_border"
+    android:orientation="vertical">
+
+    <com.tinny.commons.views.MySqureTextView
+        android:id="@+id/gradientTxt"
+        android:background="@color/md_red_100_dark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:padding="5dp"
+        android:gravity="center"
+        android:id="@+id/gradientCaption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,81 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <string name="grid">"グリッド"</string>
+    <string name="list">"リスト"</string>
+
+    <string name="app_not_found">"アプリが見つかりません"</string>
+    <string name="not_able_to_share" tools:ignore="ExtraTranslation">"共有できません"</string>
+    <string name="set_as">"として設定され"</string>
+    <string name="open_with">"で開く"</string>
+    <string name="share_via">"経由で共有"</string>
+    <string name="ok">"OK"</string>
+    <string name="cancel">"キャンセル"</string>
+    <string name="resume">"履歴書"</string>
+    <string name="restart">"再起動"</string>
+    <string name="home">"ホーム"</string>
+    <string name="more_apps">"より多くのアプリケーション"</string>
+    <string name="support">"サポート"</string>
+    <string name="report_bug">"バグを報告する"</string>
+    <string name="report_bug_desc">"バグを報告するか、新機能をリクエストしてください"</string>
+    <string name="rate_us">"私たちを評価してください"</string>
+    <string name="rate_us_desc">"このアプリが気に入ったら、ポジティブな評価のままにしてください。"</string>
+    <string name="more_apps_desc">"他のアプリをご覧ください"</string>
+    <string name="share">"お友達を招待"</string>
+    <string name="share_desc">"友達とアプリケーションを共有する"</string>
+    <string name="share_text">"ねえ、 %1$sを%2$sでチェックしてください"</string>
+    <string name="invite_via">"経由で招待"</string>
+    <string name="copyright">"v %1$s \ n著作権©Tinny Mobile Apps %2$d"</string>
+
+
+
+    <string name="daily_training">"毎日のトレーニングリマインダー"</string>
+    <string name="daily_time">"%1$s通知する"</string>
+    <string name="sound_when_playing">"再生中の音"</string>
+    <string name="vibrate">"ビューでタップを振動させる"</string>
+
+    <string name="find_number">"番号を検索： %1$s "</string>
+    <string name="reaming_numbers">"左リーミング： %1$s"</string>
+    <string name="language">言語</string>
+
+    <string name="loading_images">"画像の読み込み"</string>
+    <string name="rate_us_dilog">"フィードバックを残してください。 \ n \ nサポートありがとうございます:)"</string>
+    <string name="rate_us_dialog">"体験を評価してください"</string>
+    <string name="not_good_enough">"十分じゃない"</string>
+    <string name="yes_star">"はい、5スタート"</string>
+    <string name="thanks_for_feedback">"フィードバックをありがとう"</string>
+    <!--colorMap[AppConstants.BLUE] = ColorsData(ApplicationBootstrap.context.resources.getColor(R.color.md_blue_500),getString(R.string.blue))
+    colorMap[AppConstants.RED] = ApplicationBootstrap.context.resources.getColor(R.color.md_red_500)
+    colorMap[AppConstants.BROWN] = ApplicationBootstrap.context.resources.getColor(R.color.md_brown_500)
+    colorMap[AppConstants.ORANGE] = ApplicationBootstrap.context.resources.getColor(R.color.md_orange_500)
+    colorMap[AppConstants.PERPUL] = ApplicationBootstrap.context.resources.getColor(R.color.md_purple_500)
+    colorMap[AppConstants.YELLOW] = ApplicationBootstrap.context.resources.getColor(R.color.md_yellow_500)
+    colorMap[AppConstants.BLACK] = ApplicationBootstrap.context.resources.getColor(R.color.md_grey_black)
+    colorMap[AppConstants.GREEN] = ApplicationBootstrap.context.resources.getColor(R.color.md_green_500)
+    colorMap[AppConstants.PINK] = ApplicationBootstrap.context.resources.getColor(R.color.md_pink_500)-->
+
+
+    <string name="language_translations">
+言語翻訳はシステムを使用しています。翻訳を支援するにはこちらをタップしてください</string>
+
+    <string name="watch_video">ゲームを続行するには、ビデオをご覧ください</string>
+    <string name="great_going">素晴らしいです！</string>
+
+    <string name="try_aging">再試行 ！！</string>
+    <string name="good">よくやった</string>
+    <string name="great_job">よくやった</string>
+    <string name="wonderful">素晴らしい</string>
+    <string name="excellent">驚くばかり！！素晴らしいです</string>
+
+    <string name="you_have_completed">あなた+持っている+完了した+％1 $ s +レベル</string>
+
+    <string name="level_completed">レベル達成</string>
+    <string name="next_level">次のレベル</string>
+    <string name="next">次</string>
+
+    <string name="divisible_by_title">で割り切れる</string>
+
+
+
+
+</resources>

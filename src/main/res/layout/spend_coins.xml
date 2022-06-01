@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_rect"
+    android:orientation="vertical">
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:text="@string/great_going"
+        android:textColor="@color/md_green_600_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <com.tinny.commons.views.CircleProgressBarWithText xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="8dp"
+        android:max="500"
+        android:src="@drawable/rateus"
+        app:TbackgroundColor="@color/md_grey_400"
+        app:TbackgroundWidth="5"
+        app:TstrokeWidthCP="5" />
+
+
+    <TextView
+        android:id="@+id/txtLife"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textColor="@color/md_grey_black"
+        android:textSize="@dimen/sp_42" />
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="@string/watch_video"
+        android:textColor="@color/md_grey_black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

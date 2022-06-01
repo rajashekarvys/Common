@@ -1,0 +1,77 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="grid">"ग्रिड"</string>
+    <string name="list">"सूची"</string>
+
+    <string name="app_not_found">"आवेदन नहीं मिला"</string>
+    <string name="not_able_to_share" tools:ignore="ExtraTranslation">"साझा करने में सक्षम नहीं है"</string>
+    <string name="set_as">"के रूप में सेट करें"</string>
+    <string name="open_with">"के साथ खोलें"</string>
+    <string name="share_via">"के माध्यम से बाँटे"</string>
+    <string name="ok">"ठीक"</string>
+    <string name="cancel">"रद्द करना"</string>
+    <string name="resume">"बायोडाटा"</string>
+    <string name="restart">"पुनर्प्रारंभ करें"</string>
+    <string name="home">"घर"</string>
+    <string name="more_apps">"और ऐप"</string>
+    <string name="support">"समर्थन"</string>
+    <string name="report_bug">"रिपोर्ट बग"</string>
+    <string name="report_bug_desc">"बग की रिपोर्ट करें या नई सुविधाओं का अनुरोध करें"</string>
+    <string name="rate_us">"हमें रेटिंग दें"</string>
+    <string name="rate_us_desc">"यदि आप इस ऐप को पसंद करते हैं तो एक सकारात्मक रेटिंग के रूप में छोड़ दें।"</string>
+    <string name="more_apps_desc">"अधिक एप्लिकेशन देखें"</string>
+    <string name="share">"मित्रों को आमंत्रित करें"</string>
+    <string name="share_desc">"दोस्तों के साथ आवेदन साझा करें"</string>
+    <string name="share_text">"अरे, %1$s पर %2$s"</string>
+    <string name="invite_via">"के माध्यम से आमंत्रित करें"</string>
+    <string name="copyright">"v %1$s \ n कॉपीराइट © टनी मोबाइल ऐप %2$d"</string>
+
+
+
+    <string name="daily_training">"दैनिक प्रशिक्षण अनुस्मारक"</string>
+    <string name="daily_time">"मुझे %1$s पर याद दिलाएं"</string>
+    <string name="sound_when_playing">"खेलते समय आवाज करना"</string>
+    <string name="vibrate">"दृश्य पर कंपन टैप करें"</string>
+
+    <string name="find_number">"संख्या ज्ञात करें: %1$s "</string>
+    <string name="reaming_numbers">" बाएं बाएं: %1$s"</string>
+    <string name="language">भाषा</string>
+    <string name="loading_images">"चित्र लोड हो रहे हैं"</string>
+    <string name="rate_us_dilog">"कृपया अपनी प्रतिक्रिया छोड़ने के लिए कुछ समय दें। \ n \ n समर्थन के लिए धन्यवाद :)"</string>
+    <string name="rate_us_dialog">"अपने अनुभव को रेट करें"</string>
+    <string name="not_good_enough">"बहुत अच्छा नहीं"</string>
+    <string name="yes_star">"हाँ, 5 शुरू"</string>
+    <string name="thanks_for_feedback">"प्रतिक्रिया के लिए धन्यवाद"</string>
+
+    <!--colorMap[AppConstants.BLUE] = ColorsData(ApplicationBootstrap.context.resources.getColor(R.color.md_blue_500),getString(R.string.blue))
+    colorMap[AppConstants.RED] = ApplicationBootstrap.context.resources.getColor(R.color.md_red_500)
+    colorMap[AppConstants.BROWN] = ApplicationBootstrap.context.resources.getColor(R.color.md_brown_500)
+    colorMap[AppConstants.ORANGE] = ApplicationBootstrap.context.resources.getColor(R.color.md_orange_500)
+    colorMap[AppConstants.PERPUL] = ApplicationBootstrap.context.resources.getColor(R.color.md_purple_500)
+    colorMap[AppConstants.YELLOW] = ApplicationBootstrap.context.resources.getColor(R.color.md_yellow_500)
+    colorMap[AppConstants.BLACK] = ApplicationBootstrap.context.resources.getColor(R.color.md_grey_black)
+    colorMap[AppConstants.GREEN] = ApplicationBootstrap.context.resources.getColor(R.color.md_green_500)
+    colorMap[AppConstants.PINK] = ApplicationBootstrap.context.resources.getColor(R.color.md_pink_500)-->
+
+    <string name="language_translations">
+भाषा अनुवाद सिस्टम का उपयोग कर रहे हैं, अनुवाद पर हमारी मदद करने के लिए यहां टैप करें</string>
+
+    <string name="watch_video">खेल जारी रखने के लिए वीडियो देखें</string>
+    <string name="great_going">महान जा रहा है !!</string>
+
+    <string name="try_aging">पुनः प्रयास करें !!</string>
+    <string name="good">अच्छा काम</string>
+    <string name="great_job">अच्छा काम</string>
+    <string name="wonderful">आश्चर्यजनक</string>
+    <string name="excellent">बहुत बढ़िया!! महान जा रहा है</string>
+
+    <string name="you_have_completed">आपने + पूरा + %1$s + स्तर प्राप्त कर लिया है</string>
+
+    <string name="level_completed">स्तर पुर्ण</string>
+    <string name="next_level">अगला स्तर</string>
+    <string name="next">अगला</string>
+
+    <string name="divisible_by_title">द्वारा विभाज्य</string>
+
+
+</resources>

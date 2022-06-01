@@ -1,0 +1,153 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="grid">Grid</string>
+    <string name="list">List</string>
+
+    <string name="app_not_found">Application not found</string>
+    <string name="not_able_to_share" tools:ignore="ExtraTranslation">Not able to share</string>
+    <string name="set_as">Set as</string>
+    <string name="open_with">Open With</string>
+    <string name="share_via">Share via</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="resume">Resume</string>
+    <string name="restart">Restart</string>
+    <string name="home">Home</string>
+    <string name="more_apps">More Apps</string>
+    <string name="support">Support</string>
+    <string name="report_bug">Report bug</string>
+    <string name="report_bug_desc">Report a bug or request new features</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="rate_us_desc">Leave as a positive rating if you like this app.</string>
+    <string name="more_apps_desc">Check out more apps</string>
+    <string name="share">Invite Friends</string>
+    <string name="share_desc">Share application with friends</string>
+    <string name="share_text">Hey, come check out %1$s at %2$s</string>
+    <string name="invite_via">Invite via</string>
+    <string name="copyright">v %1$s \nCopyright © Tinny Mobile Apps %2$d</string>
+    <string name="copyright1" translatable="false">v %1$s \nCopyright © Tinnymobileapps %2$d</string>
+
+
+
+    <string name="daily_training">Daily training reminder</string>
+    <string name="daily_time">Remind me at %1$s</string>
+    <string name="sound_when_playing">Sound when playing</string>
+    <string name="vibrate">Vibrate tap on view</string>
+
+    <string name="find_number">Find number: %1$s </string>
+    <string name="reaming_numbers"> Reaming left: %1$s</string>
+    <string name="language">Language</string>
+
+    <string name="rate_us_dialog">Rate your experience</string>
+    <string name="not_good_enough" >Not good enough</string>
+    <string name="yes_star" >Yes, 5 start</string>
+    <string name="thanks_for_feedback" >Thanks for feedback</string>
+    <string name="loading_images" >Loading images</string>
+    <string name="rate_us_dilog">Please take a moment to leave your feedback. \n \n Thank you for support :)</string>
+
+
+    <string name="please_wait" translatable="false">Please wait</string>
+    <!--colorMap[AppConstants.BLUE] = ColorsData(ApplicationBootstrap.context.resources.getColor(R.color.md_blue_500),getString(R.string.blue))
+    colorMap[AppConstants.RED] = ApplicationBootstrap.context.resources.getColor(R.color.md_red_500)
+    colorMap[AppConstants.BROWN] = ApplicationBootstrap.context.resources.getColor(R.color.md_brown_500)
+    colorMap[AppConstants.ORANGE] = ApplicationBootstrap.context.resources.getColor(R.color.md_orange_500)
+    colorMap[AppConstants.PERPUL] = ApplicationBootstrap.context.resources.getColor(R.color.md_purple_500)
+    colorMap[AppConstants.YELLOW] = ApplicationBootstrap.context.resources.getColor(R.color.md_yellow_500)
+    colorMap[AppConstants.BLACK] = ApplicationBootstrap.context.resources.getColor(R.color.md_grey_black)
+    colorMap[AppConstants.GREEN] = ApplicationBootstrap.context.resources.getColor(R.color.md_green_500)
+    colorMap[AppConstants.PINK] = ApplicationBootstrap.context.resources.getColor(R.color.md_pink_500)-->
+
+    <string name="f_contact_circle" translatable="false">a</string>
+    <string name="f_add_circle" translatable="false">b</string>
+    <string name="f_add" translatable="false">c</string>
+    <string name="f_timer" translatable="false">d</string>
+    <string name="f_refresh" translatable="false">e</string>
+    <string name="f_bug" translatable="false">f</string>
+    <string name="f_clear" translatable="false">g</string>
+    <string name="f_edit" translatable="false">h</string>
+    <string name="f_delete" translatable="false">i</string>
+    <string name="f_done" translatable="false">j</string>
+    <string name="f_folder" translatable="false">l</string>
+    <string name="f_more_apps" translatable="false">m</string>
+    <string name="f_clear_circle" translatable="false">n</string>
+    <string name="f_info" translatable="false">o</string>
+    <string name="f_arrow_down" translatable="false">p</string>
+    <string name="f_arrow_left" translatable="false">q</string>
+    <string name="f_arrow_right" translatable="false">r</string>
+
+    <string name="f_arrow_up" translatable="false">s</string>
+    <string name="f_palette" translatable="false">t</string>
+    <string name="f_pause_circle" translatable="false">u</string>
+    <string name="f_pause" translatable="false">v</string>
+    <string name="f_play" translatable="false">x</string>
+    <string name="f_play_circle" translatable="false">y</string>
+    <string name="f_time" translatable="false">M</string>
+    <string name="f_settings" translatable="false">N</string>
+    <string name="f_share" translatable="false">O</string>
+    <string name="f_sort" translatable="false">P</string>
+    <string name="f_undo" translatable="false">A</string>
+    <string name="f_vibrate" translatable="false">B</string>
+    <string name="f_video" translatable="false">C</string>
+    <string name="f_list" translatable="false">D</string>
+    <string name="f_grid" translatable="false">E</string>
+    <string name="f_mute" translatable="false">F</string>
+    <string name="f_volume" translatable="false">G</string>
+    <string name="f_home" translatable="false">H</string>
+    <string name="f_camera" translatable="false">I</string>
+    <string name="f_image" translatable="false">J</string>
+    <string name="f_notification" translatable="false">S</string>
+    <string name="f_notification_Vibrate" translatable="false">T</string>
+    <string name="f_fav" translatable="false">Q</string>
+    <string name="f_unfav" translatable="false">R</string>
+    <string name="f_star" translatable="false">L</string>
+    <string name="f_full_star" translatable="false">K</string>
+    <string name="f_done_full_circle" translatable="false">Z</string>
+    <string name="f_done_circle" translatable="false">z</string>
+    <string name="f_lock" translatable="false">1</string>
+
+    <string name="blue" translatable="false">BLUE</string>
+    <string name="red" translatable="false">RED</string>
+    <string name="BROWN" translatable="false">BROWN</string>
+    <string name="ORANGE" translatable="false">ORANGE</string>
+    <string name="PURPLE" translatable="false">PURPLE</string>
+    <string name="YELLOW" translatable="false">YELLOW</string>
+    <string name="BLACK" translatable="false">BLACK</string>
+    <string name="GREEN" translatable="false">GREEN</string>
+    <string name="PINK" translatable="false">PINK</string>
+    <string name="GREY" translatable="false">GREY</string>
+
+
+    <string name="german" translatable="false">Deutsch</string>
+    <string name="spanish" translatable="false">Español</string>
+    <string name="french" translatable="false">Français</string>
+    <string name="hindi"  translatable="false">हिन्दी</string>
+    <string name="itally" translatable="false">Italiano</string>
+    <string name="japan" translatable="false">日本語</string>
+    <string name="korean" translatable="false"> 한국어/韓國語</string>
+    <string name="pora" translatable="false">português</string>
+    <string name="russain" translatable="false">русский язык</string>
+
+    <string name="language_translations">Language translations are using System, tap here to help us on translations</string>
+
+    <string name="translations" translatable="false">Translations</string>
+
+    <!--Add translatable-->
+    <string name="watch_video" >Watch video to continue the game</string>
+    <string name="great_going" >Great going !!</string>
+
+    <string name="try_aging">Try again !!</string>
+    <string name="good" >Great Job </string>
+    <string name="great_job">Great Job </string>
+    <string name="wonderful">Wonderful</string>
+    <string name="excellent">Awesome!! Great going </string>
+
+    <string name="you_have_completed">You have completed %1$s levels</string>
+
+    <string name="level_completed">Level completed</string>
+    <string name="next_level">Next Level</string>
+    <string name="next" >Next</string>
+
+    <string name="divisible_by_title" >Divisible by</string>
+
+
+
+</resources>

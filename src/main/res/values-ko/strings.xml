@@ -1,0 +1,80 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="grid">"그리드"</string>
+    <string name="list">"명부"</string>
+
+    <string name="app_not_found">"응용 프로그램을 찾을 수 없습니다"</string>
+    <string name="not_able_to_share" tools:ignore="ExtraTranslation">"공유 할 수 없습니다"</string>
+    <string name="set_as">"로 설정"</string>
+    <string name="open_with">"로 열기"</string>
+    <string name="share_via">"통해 공유"</string>
+    <string name="ok">"승인"</string>
+    <string name="cancel">"취소"</string>
+    <string name="resume">"이력서"</string>
+    <string name="restart">"재시작"</string>
+    <string name="home">"집"</string>
+    <string name="more_apps">"더 많은 애플 리케이션"</string>
+    <string name="support">"지원하다"</string>
+    <string name="report_bug">"버그를 제보하기"</string>
+    <string name="report_bug_desc">"버그보고 또는 새로운 기능 요청"</string>
+    <string name="rate_us">"우리를 평가"</string>
+    <string name="rate_us_desc">"이 앱이 마음에 들면 긍정적 인 평가를 남겨주세요."</string>
+    <string name="more_apps_desc">"더 많은 앱 확인"</string>
+    <string name="share">"친구 초대하기"</string>
+    <string name="share_desc">"친구들과 응용 프로그램 공유"</string>
+    <string name="share_text">"안녕하세요, %2$s 에서 %2$s %1$s 를) 확인하세요"</string>
+    <string name="invite_via">"통해 초대"</string>
+    <string name="copyright">"v %1$s \ n 저작권 © Tinny Mobile Apps %2$d"</string>
+
+
+
+    <string name="daily_training">"매일 훈련 알림"</string>
+    <string name="daily_time">"%1$s 알림"</string>
+    <string name="sound_when_playing">"재생할 때 소리"</string>
+    <string name="vibrate">"보기에서 진동 탭"</string>
+
+    <string name="find_number">"숫자 찾기 : %1$s "</string>
+    <string name="reaming_numbers">" 왼쪽 리밍 : %1$s"</string>
+    <string name="language">언어</string>
+
+    <string name="loading_images">"이미지 로딩"</string>
+    <string name="rate_us_dilog">"피드백을 남겨주세요. \ n \ n 지원해 주셔서 감사합니다 :)"</string>
+    <string name="rate_us_dialog">"경험 평가"</string>
+    <string name="not_good_enough">"충분하지"</string>
+    <string name="yes_star">"예, 5 회 시작"</string>
+    <string name="thanks_for_feedback">"피드백 감사합니다"</string>
+
+    <!--colorMap[AppConstants.BLUE] = ColorsData(ApplicationBootstrap.context.resources.getColor(R.color.md_blue_500),getString(R.string.blue))
+    colorMap[AppConstants.RED] = ApplicationBootstrap.context.resources.getColor(R.color.md_red_500)
+    colorMap[AppConstants.BROWN] = ApplicationBootstrap.context.resources.getColor(R.color.md_brown_500)
+    colorMap[AppConstants.ORANGE] = ApplicationBootstrap.context.resources.getColor(R.color.md_orange_500)
+    colorMap[AppConstants.PERPUL] = ApplicationBootstrap.context.resources.getColor(R.color.md_purple_500)
+    colorMap[AppConstants.YELLOW] = ApplicationBootstrap.context.resources.getColor(R.color.md_yellow_500)
+    colorMap[AppConstants.BLACK] = ApplicationBootstrap.context.resources.getColor(R.color.md_grey_black)
+    colorMap[AppConstants.GREEN] = ApplicationBootstrap.context.resources.getColor(R.color.md_green_500)
+    colorMap[AppConstants.PINK] = ApplicationBootstrap.context.resources.getColor(R.color.md_pink_500)-->
+
+
+    <string name="language_translations">
+언어 번역이 시스템을 사용하고 있습니다. 번역에 도움이되도록 여기를 누르십시오.</string>
+
+    <string name="watch_video">게임을 계속하려면 비디오보기</string>
+    <string name="great_going">대단해 !!</string>
+
+    <string name="try_aging">다시 시도하십시오 !!</string>
+    <string name="good">잘 했어</string>
+    <string name="great_job">잘 했어</string>
+    <string name="wonderful">훌륭한</string>
+    <string name="excellent">대박!! 훌륭합니다</string>
+
+    <string name="you_have_completed">+  %1$s + 레벨을 완료했습니다.</string>
+
+    <string name="level_completed">레벨 완료</string>
+    <string name="next_level">다음 레벨</string>
+    <string name="next">다음</string>
+
+    <string name="divisible_by_title">나눌 수있는</string>
+
+
+
+</resources>
