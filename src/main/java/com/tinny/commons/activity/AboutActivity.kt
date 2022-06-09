@@ -15,6 +15,7 @@ import java.util.*
 
 class AboutActivity : AppCompatActivity(),View.OnClickListener {
 
+
     val emailId= "tinnymobileapps@gmail.com"
     override fun onClick(v: View?) {
         when(v!!.id){
