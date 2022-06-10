@@ -12,6 +12,7 @@ import com.tinny.commons.R
 import com.tinny.commons.helper.AppLogger
 import kotlinx.android.synthetic.main.ating_dialog.view.*
 
+
 class DialogWithRatingBar(
     val activity: AppCompatActivity,
     message: String,
