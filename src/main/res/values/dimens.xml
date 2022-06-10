@@ -3,13 +3,10 @@
     <dimen name="small_margin">4dp</dimen>
     <dimen name="medium_margin">8dp</dimen>
     <dimen name="normal_margin">12dp</dimen>
-    <dimen name="normal_range_margin">10dp</dimen>
     <dimen name="activity_margin">16dp</dimen>
-    <dimen name="sp16">18sp</dimen>
-
     <dimen name="bigger_margin">20dp</dimen>
     <dimen name="big_margin">24dp</dimen>
-    <dimen name="txt_top_icon_size">28sp</dimen>
+
     <dimen name="social_logo">40dp</dimen>
     <dimen name="color_sample_size">30dp</dimen>
     <dimen name="colorpicker_size">240dp</dimen>
@@ -53,7 +50,7 @@
     <dimen name="fastscroll_bubble_size_small">64dp</dimen>
     <dimen name="fastscroll_bubble_text_size_small">36sp</dimen>
     <dimen name="fastscroll_bubble_padding_small">12dp</dimen>
-    <dimen name="default_stack_spacing">12dp</dimen>
+
     <dimen name="fastscroll_handle_height">40dp</dimen>
     <dimen name="fastscroll_handle_width">4dp</dimen>
     <dimen name="fastscroll_handle_radius">2dp</dimen>
@@ -64,18 +61,5 @@
     <dimen name="fastscroll_scrollbar_margin_bottom">8dp</dimen>
     <dimen name="fastscroll_scrollbar_padding_start">8dp</dimen>
     <dimen name="fastscroll_scrollbar_padding_end">8dp</dimen>
-    <dimen name="sp_18">18sp</dimen>
-    <dimen name="sp_16">16sp</dimen>
-    <dimen name="sp_28">28sp</dimen>
-    <dimen name="sp_22">22sp</dimen>
-
-    <dimen name="sp_32">32sp</dimen>
-    <dimen name="sp_42">42sp</dimen>
-    <dimen name="sp_52">52sp</dimen>
-    <dimen name="sp_48">48dp</dimen>
-    <dimen name="sortText">52dp</dimen>
-    <dimen name="sp_58">58dp</dimen>
-
-    <dimen name="sp_68">68dp</dimen>
 
 </resources>

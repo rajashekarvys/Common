@@ -5,7 +5,6 @@ import android.content.Intent
 import android.net.Uri
 import com.tinny.commons.*
 import com.tinny.commons.activity.AboutActivity
-import com.tinny.commons.helper.AppLogger
 import java.io.File
 
 fun Activity.setAsIntent(file: File, applicationId: String) {
@@ -51,57 +50,33 @@ fun Activity.openIntent(file: File, applicationId: String) {
     }.start()
 }
 
-fun Activity.shareMultipleImagesIntent(filesToSend: ArrayList<String>, applicationId: String) {
+fun Activity.shareIntent(path: String, applicationId: String) {
     Thread {
+        val newUri = getFilePublicUri(File(path), applicationId) ?: return@Thread
+        Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_STREAM, newUri)
+            type = getUriMimeType(path, newUri)
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
-        val intent = Intent()
-        intent.action = Intent.ACTION_SEND_MULTIPLE
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Here are some files.")
-        intent.type = "image/*"
-        val files = ArrayList<Uri>()
+            try {
+                if (resolveActivity(packageManager) != null) {
+                    startActivity(Intent.createChooser(this, getString(R.string.share_via)))
+                } else {
+                    toast(R.string.app_not_found)
+                }
+            } catch (e: RuntimeException) {
 
-        for (path in filesToSend /* List of the files you want to send */) {
-            val newUri = getFilePublicUri(File(path), applicationId) ?: return@Thread
-            files.add(newUri)
+            }
         }
-        intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, files)
-        startActivity(intent)
     }.start()
 }
-fun Activity.shareIntent(path: String, applicationId: String) {
-    try{
-        AppLogger.debugLogs("Test shareIntent==","path == $path applicationId == $applicationId")
-        Thread {
-            val newUri = getFilePublicUri(File(path), applicationId) ?: return@Thread
-            Intent().apply {
-                action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_STREAM, newUri)
-                type = getUriMimeType(path, newUri)
-                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
-                try {
-                    if (resolveActivity(packageManager) != null) {
-                        startActivity(Intent.createChooser(this, getString(R.string.share_via)))
-                    } else {
-                        toast(R.string.app_not_found)
-                    }
-                } catch (e: RuntimeException) {
-
-                }
-            }
-        }.start()
-    }catch (e: Exception){
-        toast(R.string.not_able_to_share)
-    }
-
-}
-
-fun Activity.lauchAboutUs(icon:Int, appName:String, packageName:String, appVersion:String, showTranslation:Boolean = true){
+fun Activity.lauchAboutUs(icon:Int,appName:String,packageName:String,appVersion:String){
     val intent = Intent(this,AboutActivity::class.java).apply {
         putExtra(Intent_AppIcon,icon)
         putExtra(Intent_AppPACKAGENAME,packageName)
         putExtra(Intent_AppName,appName)
-        putExtra(Intent_Translation,showTranslation)
         putExtra(Intent_AppVesion,appVersion)
 
     }
@@ -120,5 +95,4 @@ fun Activity.launchViewIntent(url: String) {
             }
         }
     }.start()
-
 }

@@ -4,13 +4,6 @@ import android.content.DialogInterface
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
-/*SingleChoiceDialog(this, arrayOf("1 Sec", "2 Sec", "3 sec", "4 Sec", "5 Sec"), "", 1) {
-    slideShow = true
-    handler = Handler()
-    startSlideShow(it)
-    hideSystemUI()
-}*/
-
 class SingleChoiceDialog(
     val activity: AppCompatActivity,
     items: Array<String>,

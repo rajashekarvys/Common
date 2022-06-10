@@ -4,15 +4,15 @@ import android.content.ContentUris
 import android.content.Context
 import android.database.Cursor
 import android.net.Uri
-import android.os.*
+import android.os.Environment
+import android.os.Handler
+import android.os.Looper
 import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.widget.Toast
 import androidx.core.content.FileProvider
 import com.tinny.commons.isOnMainThread
 import java.io.File
-
-
 
 fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
     // for images/videos/gifs try getting a media content uri first, like content://media/external/images/media/438
@@ -22,6 +22,7 @@ fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
     if (uri == null) {
         uri = FileProvider.getUriForFile(this, "$applicationId.provider", file)
     }
+
     return uri!!
 }
 
@@ -43,7 +44,7 @@ fun Context.getMediaContent(path: String, uri: Uri): Uri? {
     try {
         cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
         cursor.use {
-            if (it!!.moveToFirst()) {
+            if (it.moveToFirst()) {
                 val id = it.getIntValue(MediaStore.Images.Media._ID).toString()
                 return Uri.withAppendedPath(uri, id)
             }
@@ -67,10 +68,10 @@ fun Context.getUriMimeType(path: String, newUri: Uri): String {
 
 
 fun Context.getMimeTypeFromUri(uri: Uri): String {
-    var mimetype = uri.path!!.getMimeType()
+    var mimetype = uri.path.getMimeType()
     if (mimetype.isEmpty()) {
         try {
-            mimetype = contentResolver.getType(uri)!!
+            mimetype = contentResolver.getType(uri)
         } catch (e: IllegalStateException) {
         }
     }
@@ -155,26 +156,9 @@ fun Context.getDataColumn(uri: Uri, selection: String? = null, selectionArgs: Ar
     return null
 }
 
-fun Context.vibrate(millSeconds:Long){
-    val v = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-        v.vibrate(VibrationEffect.createOneShot(millSeconds, VibrationEffect.DEFAULT_AMPLITUDE))
-    } else {
-        v.vibrate(millSeconds)
-    }
-}
-
 private fun isMediaDocument(uri: Uri) = uri.authority == "com.android.providers.media.documents"
 
 private fun isDownloadsDocument(uri: Uri) = uri.authority == "com.android.providers.downloads.documents"
 
 private fun isExternalStorageDocument(uri: Uri) = uri.authority == "com.android.externalstorage.documents"
 
-fun Context.version(packageName:String):String{
-    return try {
-        this.packageManager.getPackageInfo(packageName, 0).versionName
-    }catch (e:java.lang.Exception){
-        "1.0.0"
-    }
-
-}

@@ -530,7 +530,7 @@ class FastScroller : LinearLayout {
         val handleY = getValueInRange(0, viewHeight - handleHeight, (y - handleHeight / 2).toInt())
 
         if (showBubble) {
-            bubbleView!!.y = bubbleY.toFloat() + 50
+            bubbleView!!.y = bubbleY.toFloat()
         }
 
         handleView!!.y = handleY.toFloat()

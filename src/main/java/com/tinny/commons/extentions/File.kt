@@ -91,6 +91,3 @@ private fun  fileSize(size: Long): String {
 
     return fileSizeString
 }
-
-
-

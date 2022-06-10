@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
 import com.tinny.commons.R
-import kotlinx.android.synthetic.main.about_row.view.*
 import kotlinx.android.synthetic.main.parentview.view.*
+import kotlinx.android.synthetic.main.row.view.*
 
 class InfoDialog(activity: Activity, list: ArrayList<InfoData>, title: String) : DialogInterface.OnClickListener {
 
@@ -22,7 +22,6 @@ class InfoDialog(activity: Activity, list: ArrayList<InfoData>, title: String) :
             .setView(view)
             .setPositiveButton(activity.getString(R.string.ok), this)
             .setTitle(title)
-
             .create().show()
 
     }
@@ -30,7 +29,7 @@ class InfoDialog(activity: Activity, list: ArrayList<InfoData>, title: String) :
 
 fun addViewsToParent(list: ArrayList<InfoData>, view: LinearLayout, activity: Activity) {
     for (data in list) {
-        val childView = LayoutInflater.from(activity).inflate(R.layout.about_row, null)
+        val childView = LayoutInflater.from(activity).inflate(R.layout.row, null)
         childView.txtTitle.text = data.title
         childView.txtDesc.text = data.description
         view.addView(childView)

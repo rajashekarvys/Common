@@ -17,5 +17,4 @@ abstract class BaseActivity : AppCompatActivity() {
     abstract fun getAppLauncherName(): String
 
 
-
 }
