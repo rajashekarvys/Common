@@ -8,6 +8,8 @@ object CommonConstants {
     const val WatchVideo = 1
     const val TryAgain = 2
     const val NoResponse = 3
+    const val Cancel = 4
+    const val Continue = 5
 
 
     const val TIME_HOURS: Long = 60 * 60 * 1000

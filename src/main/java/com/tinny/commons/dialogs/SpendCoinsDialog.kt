@@ -58,7 +58,7 @@ class SpendCoinsDialog(val activity: AppCompatActivity,
                     try {
                         if (alert.isShowing) {
                             alert.dismiss()
-                            callback(AlertDialog.BUTTON_NEGATIVE)
+                            callback(CommonConstants.NoResponse)
                         }
                     } catch (e: Exception) {
                         e.toString()
@@ -98,6 +98,10 @@ class SpendCoinsDialog(val activity: AppCompatActivity,
         }
         override fun onClick(dialog: DialogInterface?, which: Int) {
             dialog!!.dismiss()
-            callback(which)
+            when(which){
+                DialogInterface.BUTTON_POSITIVE->{callback(CommonConstants.Continue)}
+                DialogInterface.BUTTON_NEGATIVE->{callback(CommonConstants.TryAgain)}
+            }
+
         }
 }

@@ -148,6 +148,7 @@
 
     <string name="divisible_by_title" >Divisible by</string>
 
-
+    <string name="use_coins" >Use 30 coins to continue the game</string>
+    <string name="coins" >-30 coins</string>
 
 </resources>

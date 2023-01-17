@@ -22,7 +22,7 @@ class ImageWithTextDialog(
     image: Int,
     private val positiveButtonText: String = activity.getString(R.string.ok),
     negativeButtonText: String = activity.getString(R.string.cancel),
-    val callback: () -> Unit
+    val callback: (Int,String) -> Unit
     ) : DialogInterface.OnClickListener {
         val view: View = LayoutInflater.from(activity.baseContext).inflate(R.layout.image_wit_text, null)
 

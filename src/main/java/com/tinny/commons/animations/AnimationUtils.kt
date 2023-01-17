@@ -33,30 +33,6 @@ object AnimationUtils {
     }
 
 
-    fun fadeOutWithTransition(view: View, duration: Long = 1000, callback: () -> Unit) {
-        val anim = getAnimator(duration)
-        anim.playTogether(
-            ObjectAnimator.ofFloat(view, "translationX", 0f, 1f),
-            ObjectAnimator.ofFloat(view, "translationY", 0f, 1f),
-            ObjectAnimator.ofFloat(view, "alpha", 0f, 1f)
-        )
-        anim.start()
-        anim.addListener(object : Animator.AnimatorListener {
-            override fun onAnimationRepeat(p0: Animator?) {
-            }
-
-            override fun onAnimationEnd(p0: Animator?) {
-                callback()
-            }
-
-            override fun onAnimationCancel(p0: Animator?) {
-            }
-
-            override fun onAnimationStart(p0: Animator?) {
-            }
-
-        })
-    }
 
 
     fun fadeOutWithTransition(view: View, duration: Long = 1000, callback: () -> Unit) {
