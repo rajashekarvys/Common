@@ -6,17 +6,18 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.tinny.commons.*
+import com.tinny.commons.databinding.ActivityAboutBinding
 import com.tinny.commons.extentions.*
 import com.tinny.commons.helper.CommonConstants
 import com.tinny.commons.helper.CommonTextIcons
-import kotlinx.android.synthetic.main.about_row.view.*
-import kotlinx.android.synthetic.main.activity_about.*
 import java.util.*
 
 class AboutActivity : AppCompatActivity(),View.OnClickListener {
 
 
     val emailId= "tinnymobileapps@gmail.com"
+    private lateinit var binding: ActivityAboutBinding
+
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.moreApps ->{
@@ -32,40 +33,45 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_about)
+        binding = ActivityAboutBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
+//        setContentView(R.layout.activity_about)
+
 
         intent.getStringExtra(Intent_AppName)
-        txtAppName.text = intent.getStringExtra(Intent_AppName)
-        imgApp.setImageResource(intent.getIntExtra(Intent_AppIcon,0))
+        binding.txtAppName.text = intent.getStringExtra(Intent_AppName)
+        binding.imgApp.setImageResource(intent.getIntExtra(Intent_AppIcon,0))
 
-        moreApps.txtTitle.text = getString(R.string.more_apps)
-        moreApps.txtDesc.text = getString(R.string.more_apps_desc)
+        binding.moreApps.txtTitle.text = getString(R.string.more_apps)
+        binding.moreApps.txtDesc.text = getString(R.string.more_apps_desc)
 
-        rateUs.txtTitle.text = getString(R.string.rate_us)
-        rateUs.txtDesc.text =getString(R.string.rate_us_desc)
+        binding.rateUs.txtTitle.text = getString(R.string.rate_us)
+        binding.rateUs.txtDesc.text =getString(R.string.rate_us_desc)
 
-        share.txtTitle.text = getString(R.string.share)
-        share.txtDesc.text =getString(R.string.share_desc)
+        binding.share.txtTitle.text = getString(R.string.share)
+        binding.share.txtDesc.text =getString(R.string.share_desc)
 
-        reportBugs.txtTitle.text = getString(R.string.report_bug)
-        reportBugs.txtDesc.text =getString(R.string.report_bug_desc)
+        binding.reportBugs.txtTitle.text = getString(R.string.report_bug)
+        binding.reportBugs.txtDesc.text =getString(R.string.report_bug_desc)
         setupCopyright()
 
         if (intent.getBooleanExtra(Intent_Translation,true)){
-            rrTrans.makeVisible()
+            binding.rrTrans.makeVisible()
         }else{
-            rrTrans.makeGone()
+            binding.rrTrans.makeGone()
         }
 
-        moreApps.txtIcon.setFontWithColor(this, getString(R.string.f_more_apps), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
-        rateUs.txtIcon.setFontWithColor(this, getString(R.string.f_full_star), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
-        share.txtIcon.setFontWithColor(this, getString(R.string.f_fav), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
-        reportBugs.txtIcon.setFontWithColor(this, getString(R.string.f_bug), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
-        txtIconTran.setFontWithColor(this, CommonTextIcons.F_Translation, CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
+        binding.moreApps.txtIcon.setFontWithColor(this, getString(R.string.f_more_apps), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
+        binding.rateUs.txtIcon.setFontWithColor(this, getString(R.string.f_full_star), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
+        binding.share.txtIcon.setFontWithColor(this, getString(R.string.f_fav), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
+        binding.reportBugs.txtIcon.setFontWithColor(this, getString(R.string.f_bug), CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
+        binding.txtIconTran.setFontWithColor(this, CommonTextIcons.F_Translation, CommonConstants.icomoonCommon, resources.getColor(R.color.md_grey_black))
 
 
 
-        txtTranHelp.setOnClickListener {
+        binding.txtTranHelp.setOnClickListener {
             val mIntent = Intent(Intent.ACTION_SENDTO)
             mIntent.data = Uri.parse("mailto:")
             mIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf(emailId))
@@ -73,10 +79,7 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
             startActivity(Intent.createChooser(mIntent, "Send Email"))
         }
 //        Toast.makeText(this,packageName,Toast.LENGTH_SHORT).show()
-        moreApps.setOnClickListener(this)
-        rateUs.setOnClickListener(this)
-        share.setOnClickListener(this)
-        reportBugs.setOnClickListener(this)
+
     }
 
     private fun onClickShare() {
@@ -93,7 +96,7 @@ class AboutActivity : AppCompatActivity(),View.OnClickListener {
     private fun setupCopyright() {
         val versionName = intent.getStringExtra(Intent_AppVesion)
         val year = Calendar.getInstance().get(Calendar.YEAR)
-        txtCopyrights.text = String.format(getString(R.string.copyright1), versionName, year)
+        binding.txtCopyrights.text = String.format(getString(R.string.copyright1), versionName, year)
     }
 
     private fun reportBug(){

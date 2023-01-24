@@ -16,17 +16,17 @@ object AnimationUtils {
         )
         anim.start()
         anim.addListener(object : Animator.AnimatorListener {
-            override fun onAnimationRepeat(p0: Animator?) {
+            override fun onAnimationRepeat(p0: Animator) {
             }
 
-            override fun onAnimationEnd(p0: Animator?) {
+            override fun onAnimationEnd(p0: Animator) {
                 callback()
             }
 
-            override fun onAnimationCancel(p0: Animator?) {
+            override fun onAnimationCancel(p0: Animator) {
             }
 
-            override fun onAnimationStart(p0: Animator?) {
+            override fun onAnimationStart(p0: Animator) {
             }
 
         })
@@ -44,17 +44,17 @@ object AnimationUtils {
         )
         anim.start()
         anim.addListener(object : Animator.AnimatorListener {
-            override fun onAnimationRepeat(p0: Animator?) {
+            override fun onAnimationRepeat(p0: Animator) {
             }
 
-            override fun onAnimationEnd(p0: Animator?) {
+            override fun onAnimationEnd(p0: Animator) {
                 callback()
             }
 
-            override fun onAnimationCancel(p0: Animator?) {
+            override fun onAnimationCancel(p0: Animator) {
             }
 
-            override fun onAnimationStart(p0: Animator?) {
+            override fun onAnimationStart(p0: Animator) {
             }
 
         })
@@ -70,17 +70,17 @@ object AnimationUtils {
         )
         anim.start()
         anim.addListener(object : Animator.AnimatorListener {
-            override fun onAnimationRepeat(p0: Animator?) {
+            override fun onAnimationRepeat(p0: Animator) {
             }
 
-            override fun onAnimationEnd(p0: Animator?) {
+            override fun onAnimationEnd(p0: Animator) {
                 callback()
             }
 
-            override fun onAnimationCancel(p0: Animator?) {
+            override fun onAnimationCancel(p0: Animator) {
             }
 
-            override fun onAnimationStart(p0: Animator?) {
+            override fun onAnimationStart(p0: Animator) {
             }
 
         })
@@ -96,17 +96,17 @@ object AnimationUtils {
         )
         anim.start()
         anim.addListener(object : Animator.AnimatorListener {
-            override fun onAnimationRepeat(p0: Animator?) {
+            override fun onAnimationRepeat(p0: Animator) {
             }
 
-            override fun onAnimationEnd(p0: Animator?) {
+            override fun onAnimationEnd(p0: Animator) {
                 callback()
             }
 
-            override fun onAnimationCancel(p0: Animator?) {
+            override fun onAnimationCancel(p0: Animator) {
             }
 
-            override fun onAnimationStart(p0: Animator?) {
+            override fun onAnimationStart(p0: Animator) {
             }
 
         })
@@ -130,10 +130,10 @@ object AnimationUtils {
 
         anim.start()
         anim.addListener(object : Animator.AnimatorListener {
-            override fun onAnimationRepeat(p0: Animator?) {
+            override fun onAnimationRepeat(p0: Animator) {
             }
 
-            override fun onAnimationEnd(p0: Animator?) {
+            override fun onAnimationEnd(p0: Animator) {
                 maxRep--
                 if (maxRep!=0){
                     anim.start()
@@ -142,10 +142,10 @@ object AnimationUtils {
                 }
             }
 
-            override fun onAnimationCancel(p0: Animator?) {
+            override fun onAnimationCancel(p0: Animator) {
             }
 
-            override fun onAnimationStart(p0: Animator?) {
+            override fun onAnimationStart(p0: Animator) {
             }
 
         })

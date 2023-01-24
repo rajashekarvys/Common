@@ -9,8 +9,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.tinny.commons.R
+import com.tinny.commons.databinding.AtingDialogBinding
+import com.tinny.commons.databinding.ViewExpoldeBinding
 import com.tinny.commons.helper.AppLogger
-import kotlinx.android.synthetic.main.ating_dialog.view.*
 
 
 class DialogWithRatingBar(
@@ -22,25 +23,29 @@ class DialogWithRatingBar(
     negativeButtonText: String = activity.getString(R.string.cancel),
     val callback: (value: Int, name: String) -> Unit
     ) : DialogInterface.OnClickListener {
-    val view: View = LayoutInflater.from(activity.baseContext).inflate(R.layout.ating_dialog, null)
+
+    private var binding: AtingDialogBinding =
+        AtingDialogBinding.inflate(LayoutInflater.from(activity),null,false)
 
     init {
-        view.txtMessage.text = message
-        view.ratingBar.rating = rating.toFloat()
+
+        binding.txtMessage.text = message
+        binding.ratingBar.rating = rating.toFloat()
         if (!activity.isDestroyed) {
             if (rating == 3) {
                 Glide.with(activity)
                     .asGif()
                     .load(R.drawable.animation_300_kkpd76lz)
-                    .into(view.ratingImg)
+                    .into(binding.ratingImg)
             } else {
                 Glide.with(activity)
                     .asGif()
                     .load(R.drawable.animation_300_kkpd7el9)
-                    .into(view.ratingImg)
+                    .into(binding.ratingImg)
             }
         }
         if (!activity.isDestroyed) {
+            val view = binding.root
             val dialog = AlertDialog.Builder(activity).setView(view)
             val alert = dialog.setCancelable(false)
                 .setPositiveButton(positiveButtonText, this)

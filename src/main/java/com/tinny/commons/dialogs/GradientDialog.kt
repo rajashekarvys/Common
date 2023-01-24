@@ -9,22 +9,24 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.tinny.commons.R
+import com.tinny.commons.databinding.DailogEdittextBinding
+import com.tinny.commons.databinding.ListDialogBinding
 import com.tinny.commons.helper.UtilsHelper
 import com.tinny.commons.views.MyGridLayoutManager
-import kotlinx.android.synthetic.main.gradient_row.view.*
-import kotlinx.android.synthetic.main.list_dialog.view.*
 
 class GradientDialog(var activity: Activity, title: String) : DialogInterface.OnClickListener {
 
     override fun onClick(dialog: DialogInterface?, which: Int) {
         dialog!!.dismiss()
     }
+    private var binding: ListDialogBinding =
+        ListDialogBinding.inflate(LayoutInflater.from(activity),null,false)
 
     init {
        val list = loadArray()
         val view = LayoutInflater.from(activity).inflate(R.layout.list_dialog, null)
-        view.rcvDialog.layoutManager =  MyGridLayoutManager(activity,3)
-        view.rcvDialog.adapter = GradientAdapter(list)
+        binding.rcvDialog.layoutManager =  MyGridLayoutManager(activity,3)
+        binding.rcvDialog.adapter = GradientAdapter(list)
         AlertDialog.Builder(activity)
                 .setView(view)
                 .setPositiveButton(activity.getString(R.string.cancel), this)
@@ -88,8 +90,8 @@ class GradientAdapter(var data: ArrayList<GradientData>): RecyclerView.Adapter<G
     }
 
     override fun onBindViewHolder(holder: GradientHolder, position: Int) {
-        holder.itemView.gradientTxt.background = UtilsHelper.getGerdientBackGround(data[position].colorArray)
-        holder.itemView.gradientCaption.text = data[position].title
+        /*holder.itemView.gradientTxt.background = UtilsHelper.getGerdientBackGround(data[position].colorArray)
+        holder.itemView.gradientCaption.text = data[position].title*/
     }
 
 }

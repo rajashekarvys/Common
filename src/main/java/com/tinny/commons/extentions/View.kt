@@ -115,7 +115,7 @@ fun View.rotateViewWithAngle(from: Float, to: Float) {
     rotate.start()
 }
 
-fun View.setSafeOnClickListener(defaultInterval: Int = 1000,onSafeClick: (View) -> Unit) {
+fun View.setSafeOnClickListener(defaultInterval: Int = 600,onSafeClick: (View) -> Unit) {
     val safeClickListener = SafeClickListener(defaultInterval) {
         onSafeClick(it)
     }
@@ -143,16 +143,16 @@ fun View.elasticAnim(){
         .scaleY(0.8f)
         .setInterpolator(CycleInterpolator(0.5f))
         .setListener( object :ViewPropertyAnimatorListener {
-            override fun onAnimationEnd(view: View?) {
+            override fun onAnimationEnd(view: View) {
                 view!!.scaleX =1f
                 view!!.scaleY =1f
 
             }
 
-            override fun onAnimationCancel(view: View?) {
+            override fun onAnimationCancel(view: View) {
             }
 
-            override fun onAnimationStart(view: View?) {
+            override fun onAnimationStart(view: View) {
             }
 
         })

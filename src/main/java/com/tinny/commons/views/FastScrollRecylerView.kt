@@ -19,9 +19,10 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.core.view.ViewCompat
 import com.tinny.commons.R
+import com.tinny.commons.databinding.DailogEdittextBinding
+import com.tinny.commons.databinding.FastScrollBinding
 import com.tinny.commons.extentions.isVisibile
 import com.tinny.commons.extentions.makeVisible
-import kotlinx.android.synthetic.main.fast_scroll.view.*
 
 class FastScrollRecylerView : LinearLayout {
 
@@ -44,8 +45,10 @@ class FastScrollRecylerView : LinearLayout {
     private var hideScrollbar: Boolean = false
     private var showBubble: Boolean = false
 
+    private  var binding: FastScrollBinding =
+        FastScrollBinding.inflate(LayoutInflater.from(context), this)
+
     init {
-        LayoutInflater.from(context).inflate(R.layout.fast_scroll, this)
         setHandleColor(Color.GRAY)
     }
 
@@ -64,7 +67,7 @@ class FastScrollRecylerView : LinearLayout {
 
     }
 
-    fun setSectionIndexer(@Nullable sectionIndexer: SectionIndexer) {
+    fun setSectionIndexer(sectionIndexer: SectionIndexer) {
         this.sectionIndexer = sectionIndexer
     }
 
@@ -80,16 +83,16 @@ class FastScrollRecylerView : LinearLayout {
         }
 
         DrawableCompat.setTint(handleImage!!, color)
-        imgHandle.setImageDrawable(handleImage)
+        binding.imgHandle.setImageDrawable(handleImage)
     }
 
     private fun setPosition(y: Float) {
         val position = y / viewHeight
-        val bubbleHeight = txtBubble.height
-        txtBubble.y =
+        val bubbleHeight = binding.txtBubble.height
+        binding.txtBubble.y =
             getValueInRange(0, viewHeight - bubbleHeight, ((viewHeight - bubbleHeight) * position).toInt()).toFloat()
-        val handleHeight = imgHandle.height
-        imgHandle.y =
+        val handleHeight = binding.imgHandle.height
+        binding.imgHandle.y =
             getValueInRange(0, viewHeight - handleHeight, ((viewHeight - handleHeight) * position).toInt()).toFloat()
     }
 
@@ -102,16 +105,16 @@ class FastScrollRecylerView : LinearLayout {
         if (parentRecyclerView != null) {
             val itemCount = parentRecyclerView.getAdapter()!!.getItemCount()
             val proportion: Float
-            if (txtBubble.getY() == 0f) {
-                proportion = 0f
-            } else if (txtBubble.getY() + txtBubble.getHeight() >= viewHeight - TRACK_SNAP_RANGE) {
-                proportion = 1f
+            proportion = if (binding.txtBubble.getY() == 0f) {
+                0f
+            } else if (binding.txtBubble.getY() + binding.txtBubble.getHeight() >= viewHeight - TRACK_SNAP_RANGE) {
+                1f
             } else {
-                proportion = y / viewHeight.toFloat()
+                y / viewHeight.toFloat()
             }
             val targetPos = getValueInRange(0, itemCount - 1, (proportion * itemCount.toFloat()).toInt())
             parentRecyclerView.scrollToPosition(targetPos)
-            txtBubble.setText(sectionIndexer!!.getSectionText(targetPos))
+            binding.txtBubble.setText(sectionIndexer!!.getSectionText(targetPos))
 
         }
     }
@@ -119,7 +122,7 @@ class FastScrollRecylerView : LinearLayout {
     private val scrollListener = object : androidx.recyclerview.widget.RecyclerView.OnScrollListener() {
 
         override fun onScrolled(@NonNull recyclerView: androidx.recyclerview.widget.RecyclerView, dx: Int, dy: Int) {
-            if (!imgHandle.isSelected() && isEnabled) {
+            if (!binding.imgHandle.isSelected() && isEnabled) {
                 setPosition(getScrollProportion(recyclerView))
             }
 
@@ -161,12 +164,12 @@ class FastScrollRecylerView : LinearLayout {
                         handler.removeCallbacks(scrollbarHider)
                         cancelAnimation(scrollbarAnimator)
 
-                        if (!scrollbar.isVisibile()) {
+                        if (!binding.scrollbar.isVisibile()) {
                             showScrollbar()
                         }
                     }
 
-                    androidx.recyclerview.widget.RecyclerView.SCROLL_STATE_IDLE -> if (hideScrollbar && !imgHandle.isSelected()) {
+                    androidx.recyclerview.widget.RecyclerView.SCROLL_STATE_IDLE -> if (hideScrollbar && !binding.imgHandle.isSelected()) {
                         handler.postDelayed(scrollbarHider, SCROLLBAR_HIDE_DELAY.toLong())
                     }
                 }
@@ -178,7 +181,7 @@ class FastScrollRecylerView : LinearLayout {
     override fun onTouchEvent(@NonNull event: MotionEvent): Boolean {
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
-                if (event.x < imgHandle.getX() - ViewCompat.getPaddingStart(scrollbar)) {
+                if (event.x < binding.imgHandle.getX() - ViewCompat.getPaddingStart(binding.scrollbar)) {
                     return false
                 }
 
@@ -189,7 +192,7 @@ class FastScrollRecylerView : LinearLayout {
                 cancelAnimation(scrollbarAnimator)
                 cancelAnimation(bubbleAnimator)
 
-                if (!scrollbar.isVisibile()) {
+                if (!binding.scrollbar.isVisibile()) {
                     showScrollbar()
                 }
 
@@ -242,9 +245,9 @@ class FastScrollRecylerView : LinearLayout {
     }
 
     private fun showBubble() {
-        if (!txtBubble.isVisibile()) {
-            txtBubble.makeVisible()
-            bubbleAnimator = txtBubble.animate().alpha(1f)
+        if (!binding.txtBubble.isVisibile()) {
+            binding.txtBubble.makeVisible()
+            bubbleAnimator = binding.txtBubble.animate().alpha(1f)
                 .setDuration(BUBBLE_ANIM_DURATION.toLong())
                 .setListener(object : AnimatorListenerAdapter() {
 
@@ -254,20 +257,20 @@ class FastScrollRecylerView : LinearLayout {
     }
 
     private fun hideBubble() {
-        if (txtBubble.isVisibile()) {
-            bubbleAnimator = txtBubble.animate().alpha(0f)
+        if (binding.txtBubble.isVisibile()) {
+            bubbleAnimator = binding.txtBubble.animate().alpha(0f)
                 .setDuration(BUBBLE_ANIM_DURATION.toLong())
                 .setListener(object : AnimatorListenerAdapter() {
 
                     override fun onAnimationEnd(animation: Animator) {
                         super.onAnimationEnd(animation)
-                        txtBubble.setVisibility(View.GONE)
+                        binding.txtBubble.setVisibility(View.GONE)
                         bubbleAnimator = null
                     }
 
                     override fun onAnimationCancel(animation: Animator) {
                         super.onAnimationCancel(animation)
-                        txtBubble.setVisibility(View.GONE)
+                        binding.txtBubble.setVisibility(View.GONE)
                         bubbleAnimator = null
                     }
                 })
@@ -277,9 +280,9 @@ class FastScrollRecylerView : LinearLayout {
     private fun showScrollbar() {
         if (parentRecyclerView.computeVerticalScrollRange() - viewHeight > 0) {
             val transX = 16f
-            scrollbar.setTranslationX(transX)
-            scrollbar.setVisibility(View.VISIBLE)
-            scrollbarAnimator = scrollbar.animate().translationX(0f).alpha(1f)
+            binding.scrollbar.setTranslationX(transX)
+            binding.scrollbar.setVisibility(View.VISIBLE)
+            scrollbarAnimator = binding.scrollbar.animate().translationX(0f).alpha(1f)
                 .setDuration(SCROLLBAR_ANIM_DURATION.toLong())
                 .setListener(object : AnimatorListenerAdapter() {
 
@@ -291,26 +294,26 @@ class FastScrollRecylerView : LinearLayout {
     private fun hideScrollbar() {
         val transX = 16f
 
-        scrollbarAnimator = scrollbar.animate().translationX(transX).alpha(0f)
+        scrollbarAnimator = binding.scrollbar.animate().translationX(transX).alpha(0f)
             .setDuration(SCROLLBAR_ANIM_DURATION.toLong())
             .setListener(object : AnimatorListenerAdapter() {
 
                 override fun onAnimationEnd(animation: Animator) {
                     super.onAnimationEnd(animation)
-                    scrollbar.setVisibility(View.GONE)
+                    binding.scrollbar.setVisibility(View.GONE)
                     scrollbarAnimator = null
                 }
 
                 override fun onAnimationCancel(animation: Animator) {
                     super.onAnimationCancel(animation)
-                    scrollbar.setVisibility(View.GONE)
+                    binding.scrollbar.setVisibility(View.GONE)
                     scrollbarAnimator = null
                 }
             })
     }
 
     private fun setHandleSelected(selected: Boolean) {
-        imgHandle.isSelected = selected
+        binding.imgHandle.isSelected = selected
         DrawableCompat.setTint(handleImage!!, Color.GREEN)
     }
 

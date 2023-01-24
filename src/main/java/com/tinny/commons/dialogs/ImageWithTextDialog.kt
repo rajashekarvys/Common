@@ -12,8 +12,9 @@ import android.view.View
 import android.view.Window
 import androidx.appcompat.app.AlertDialog
 import com.tinny.commons.R
+import com.tinny.commons.databinding.AtingDialogBinding
+import com.tinny.commons.databinding.ImageWitTextBinding
 import com.tinny.commons.helper.AppLogger
-import kotlinx.android.synthetic.main.ating_dialog.view.*
 
 class ImageWithTextDialog(
     val activity: Activity,
@@ -24,12 +25,15 @@ class ImageWithTextDialog(
     negativeButtonText: String = activity.getString(R.string.cancel),
     val callback: (Int,String) -> Unit
     ) : DialogInterface.OnClickListener {
-        val view: View = LayoutInflater.from(activity.baseContext).inflate(R.layout.image_wit_text, null)
+//        val view: View = LayoutInflater.from(activity.baseContext).inflate(R.layout.image_wit_text, null)
+    private var binding: ImageWitTextBinding =
+        ImageWitTextBinding.inflate(LayoutInflater.from(activity),null,false)
 
         init {
-            view.txtMessage.text = message
-            view.ratingImg.setImageResource(image)
+            binding.txtMessage.text = message
+            binding.ratingImg.setImageResource(image)
             if (!activity.isFinishing) {
+                val view = binding.root
                 val dialog = AlertDialog.Builder(activity).setView(view)
                 val alert = dialog.setCancelable(false)
                     .setPositiveButton(positiveButtonText, this)
@@ -48,8 +52,8 @@ class ImageWithTextDialog(
                 if (title.isEmpty()) {
 
                     alert.requestWindowFeature(Window.FEATURE_NO_TITLE)
-                    view.txtMessage.typeface = Typeface.DEFAULT_BOLD
-                    view.txtMessage.gravity = Gravity.LEFT
+                    binding.txtMessage.typeface = Typeface.DEFAULT_BOLD
+                    binding.txtMessage.gravity = Gravity.LEFT
                 }else{
                     val titleSpan = SpannableString(title)
                     titleSpan.setSpan(

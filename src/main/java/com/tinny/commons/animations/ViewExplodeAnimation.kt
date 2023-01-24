@@ -17,14 +17,17 @@ import android.view.animation.OvershootInterpolator
 import android.widget.FrameLayout
 import android.widget.ImageView
 import com.tinny.commons.R
+import com.tinny.commons.databinding.ActivityAboutBinding
+import com.tinny.commons.databinding.ViewExpoldeBinding
 import com.tinny.commons.extentions.makeVisible
-import kotlinx.android.synthetic.main.view_expolde.view.*
 
 class ViewExplodeAnimation : FrameLayout {
     private val DECCELERATE_INTERPOLATOR = DecelerateInterpolator()
     private val ACCELERATE_DECELERATE_INTERPOLATOR = AccelerateDecelerateInterpolator()
     private val OVERSHOOT_INTERPOLATOR = OvershootInterpolator(4f)
     private var animatorSet: AnimatorSet? = null
+    private lateinit var binding: ViewExpoldeBinding
+
 
     constructor(context: Context) : super(context) {
         init()
@@ -53,32 +56,33 @@ class ViewExplodeAnimation : FrameLayout {
     }
 
     private fun init() {
-        LayoutInflater.from(context).inflate(R.layout.view_expolde, this, true)
+        binding = ViewExpoldeBinding.inflate(LayoutInflater.from(context),this)
+        val view = binding.root
     }
 
     fun setText(text: String) {
-        txtAnim.text = text
+        binding.txtAnim.text = text
     }
 
     fun setTextViewBackground(mDrawable: Drawable) {
-        txtAnim.setBackgroundDrawable(mDrawable)
+        binding.txtAnim.setBackgroundDrawable(mDrawable)
     }
 
     fun getText(): String {
-        return txtAnim.text.toString()
+        return binding.txtAnim.text.toString()
     }
 
     fun doClick() {
-        dots.makeVisible()
+        binding.dots.makeVisible()
         if (animatorSet != null) {
             animatorSet!!.cancel()
         }
 
-        txtAnim.animate().cancel()
-        txtAnim.scaleX = 0f
-        txtAnim.scaleY = 0f
+        binding.txtAnim.animate().cancel()
+        binding.txtAnim.scaleX = 0f
+        binding.txtAnim.scaleY = 0f
 
-        dots.currentProgress = 0f
+        binding.dots.currentProgress = 0f
 
         animatorSet = AnimatorSet()
 
@@ -91,20 +95,20 @@ class ViewExplodeAnimation : FrameLayout {
         innerCircleAnimator.setStartDelay(200);
         innerCircleAnimator.setInterpolator(DECCELERATE_INTERPOLATOR);*/
 
-        val starScaleYAnimator = ObjectAnimator.ofFloat(txtAnim, ImageView.SCALE_Y, 0.5f, 1f)
+        val starScaleYAnimator = ObjectAnimator.ofFloat(binding.txtAnim, ImageView.SCALE_Y, 0.5f, 1f)
         starScaleYAnimator.duration = 1000
         starScaleYAnimator.startDelay = 350
         starScaleYAnimator.interpolator = OVERSHOOT_INTERPOLATOR
         starScaleYAnimator.repeatCount = 2
 
 
-        val starScaleXAnimator = ObjectAnimator.ofFloat(txtAnim, ImageView.SCALE_X, 0.5f, 1f)
+        val starScaleXAnimator = ObjectAnimator.ofFloat(binding.txtAnim, ImageView.SCALE_X, 0.5f, 1f)
         starScaleXAnimator.duration = 1000
         starScaleXAnimator.startDelay = 350
         starScaleXAnimator.interpolator = OVERSHOOT_INTERPOLATOR
         starScaleYAnimator.repeatCount = 2
 
-        val dotsAnimator = ObjectAnimator.ofFloat(dots, dots.DOTS_PROGRESS, 0f, 1f)
+        val dotsAnimator = ObjectAnimator.ofFloat(binding.dots, binding.dots.DOTS_PROGRESS, 0f, 1f)
         dotsAnimator.duration = 1900
         dotsAnimator.startDelay = 50
         dotsAnimator.interpolator = ACCELERATE_DECELERATE_INTERPOLATOR
@@ -120,9 +124,9 @@ class ViewExplodeAnimation : FrameLayout {
 
         animatorSet!!.addListener(object : AnimatorListenerAdapter() {
             override fun onAnimationCancel(animation: Animator) {
-                dots.currentProgress = 0f
-                txtAnim.scaleX = 1f
-                txtAnim.scaleY = 1f
+                binding.dots.currentProgress = 0f
+                binding.txtAnim.scaleX = 1f
+                binding.txtAnim.scaleY = 1f
             }
         })
         animatorSet!!.start()
@@ -131,7 +135,7 @@ class ViewExplodeAnimation : FrameLayout {
     override fun onTouchEvent(event: MotionEvent): Boolean {
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
-                txtAnim.animate().scaleX(0.7f).scaleY(0.7f).setDuration(150).interpolator =
+                binding.txtAnim.animate().scaleX(0.7f).scaleY(0.7f).setDuration(150).interpolator =
                     DECCELERATE_INTERPOLATOR
                 isPressed = true
             }
@@ -146,7 +150,7 @@ class ViewExplodeAnimation : FrameLayout {
             }
 
             MotionEvent.ACTION_UP -> {
-                txtAnim.animate().scaleX(1f).scaleY(1f).interpolator = DECCELERATE_INTERPOLATOR
+                binding.txtAnim.animate().scaleX(1f).scaleY(1f).interpolator = DECCELERATE_INTERPOLATOR
                 if (isPressed) {
                     doClick()
                     isPressed = false
@@ -154,7 +158,7 @@ class ViewExplodeAnimation : FrameLayout {
             }
 
             MotionEvent.ACTION_CANCEL -> {
-                txtAnim.animate().scaleX(1f).scaleY(1f).interpolator = DECCELERATE_INTERPOLATOR
+                binding.txtAnim.animate().scaleX(1f).scaleY(1f).interpolator = DECCELERATE_INTERPOLATOR
                 isPressed = false
             }
         }

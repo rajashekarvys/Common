@@ -12,12 +12,12 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.tinny.commons.R
 import com.tinny.commons.animations.AnimationUtils
+import com.tinny.commons.databinding.RateUsBinding
+import com.tinny.commons.databinding.SpendCoinsBinding
 import com.tinny.commons.extentions.setFontWithColor
 import com.tinny.commons.helper.AppLogger
 import com.tinny.commons.helper.CommonConstants
-import kotlinx.android.synthetic.main.ating_dialog.view.*
-import kotlinx.android.synthetic.main.ating_dialog.view.txtMessage
-import kotlinx.android.synthetic.main.watch_video.view.*
+
 
 class SpendCoinsDialog(val activity: AppCompatActivity,
     message: String,
@@ -26,23 +26,24 @@ class SpendCoinsDialog(val activity: AppCompatActivity,
     val callback: (value: Int) -> Unit
     ) : DialogInterface.OnClickListener {
 
-
-        val view: View = LayoutInflater.from(activity.baseContext).inflate(R.layout.spend_coins, null)
-        val alertDialog = AlertDialog.Builder(activity).setView(view)
+    private var binding: SpendCoinsBinding =
+        SpendCoinsBinding.inflate(LayoutInflater.from(activity),null,false)
+        //val view: View = LayoutInflater.from(activity.baseContext).inflate(R.layout.spend_coins, null)
+        val alertDialog = AlertDialog.Builder(activity).setView(binding.root)
         val alert = alertDialog.setCancelable(false)
         .setPositiveButton(positiveButtonText, this)
         .setNegativeButton(negativeButtonText, this)
         .create()
         init {
-            view.txtMessage.text = message
+            binding.txtMessage.text = message
 
-            view.img.maxValue = 500f
-            val animationLocal = ObjectAnimator.ofInt(view.img, "progress", 0, 500)
+            binding.img.maxValue = 500f
+            val animationLocal = ObjectAnimator.ofInt(binding.img, "progress", 0, 500)
             animationLocal.duration = 10000L
             animationLocal.interpolator = AccelerateInterpolator()
             animationLocal.start()
 
-            view.txtLife.setFontWithColor(
+            binding.txtLife.setFontWithColor(
                 context = activity,
                 color = activity.resources.getColor(R.color.md_red_500),
                 fileName = CommonConstants.icomoonCommon,
@@ -50,10 +51,10 @@ class SpendCoinsDialog(val activity: AppCompatActivity,
             )
 
             animationLocal.addListener(object : Animator.AnimatorListener {
-                override fun onAnimationRepeat(p0: Animator?) {
+                override fun onAnimationRepeat(p0: Animator) {
                 }
 
-                override fun onAnimationEnd(p0: Animator?) {
+                override fun onAnimationEnd(p0: Animator) {
 
                     try {
                         if (alert.isShowing) {
@@ -66,15 +67,15 @@ class SpendCoinsDialog(val activity: AppCompatActivity,
 
                 }
 
-                override fun onAnimationCancel(p0: Animator?) {
+                override fun onAnimationCancel(p0: Animator) {
                 }
 
-                override fun onAnimationStart(p0: Animator?) {
+                override fun onAnimationStart(p0: Animator) {
                 }
 
             })
 
-            AnimationUtils.pulseAnimation(view = view.txtLife, repeatCount = 10) {
+            AnimationUtils.pulseAnimation(view = binding.txtLife, repeatCount = 10) {
             }
             if (!activity.isFinishing) {
                 alert.setOnShowListener {

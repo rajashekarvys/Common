@@ -6,11 +6,12 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.tinny.commons.R
+import com.tinny.commons.databinding.AtingDialogBinding
+import com.tinny.commons.databinding.RateUsBinding
 import com.tinny.commons.extentions.launchViewIntent
 import com.tinny.commons.extentions.setFontWithColor
 import com.tinny.commons.extentions.toast
 import com.tinny.commons.helper.CommonConstants
-import kotlinx.android.synthetic.main.rate_us.view.*
 
 class RateUsDialog(
     val activity: AppCompatActivity,
@@ -19,35 +20,36 @@ class RateUsDialog(
     val icon:Int = 0,
     val callback: () -> Unit
 ) {
+    private var binding: RateUsBinding =
+        RateUsBinding.inflate(LayoutInflater.from(activity),null,false)
 
-    val view: View = LayoutInflater.from(activity).inflate(R.layout.rate_us, null)
     lateinit var alertDialog: AlertDialog
 
     init {
 //        view.img.setImageResource(icon)
 //        view.header.setBackgroundColor(color)
-        view.txtMessage.text = message
-        view.txt_title.setTextColor(color)
-        view.imgCancel.setOnClickListener {
+        binding.txtMessage.text = message
+        binding.txtTitle.setTextColor(color)
+        binding.imgCancel.setOnClickListener {
             this.alertDialog.dismiss()
         }
-        view.rateus.setOnClickListener {
+        binding.rateus.setOnClickListener {
             activity.launchViewIntent("market://details?id=${activity.packageName}")
             alertDialog.dismiss()
             callback()
         }
-        view.feedback.setOnClickListener {
+        binding.feedback.setOnClickListener {
             this.alertDialog.dismiss()
             activity.toast(activity.getString(R.string.thanks_for_feedback))
             callback()
         }
-        view.imgCancel.setFontWithColor(
+        binding.imgCancel.setFontWithColor(
             context = activity,
             color = activity.resources.getColor(R.color.md_grey_black),
             fileName = CommonConstants.icomoonCommon,
             font = activity.getString(R.string.f_clear)
         )
-        val dialog = AlertDialog.Builder(activity).setView(view)
+        val dialog = AlertDialog.Builder(activity).setView(binding.root)
         alertDialog = dialog.create()
         alertDialog.show()
         alertDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))

@@ -3,6 +3,7 @@ package com.tinny.commons.helper
 object CommonConstants {
     const val icomoon = "icomoon.ttf"
     const val icomoonCommon = "icomoon_common.ttf"
+    const val common = "common.ttf"
 
     const val clapUniCode = 0x1F44F
     const val WatchVideo = 1

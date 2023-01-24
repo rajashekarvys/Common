@@ -12,8 +12,9 @@ import android.view.View
 import android.view.Window
 import androidx.appcompat.app.AlertDialog
 import com.tinny.commons.R
+import com.tinny.commons.databinding.SpendCoinsBinding
+import com.tinny.commons.databinding.UpgradeToProBinding
 import com.tinny.commons.helper.AppLogger
-import kotlinx.android.synthetic.main.ating_dialog.view.*
 
 class UpgradeToPro(
     val activity: Activity,
@@ -24,14 +25,16 @@ class UpgradeToPro(
     negativeButtonText: String = activity.getString(R.string.cancel),
     val callback: (Int,String) -> Unit
 ) : DialogInterface.OnClickListener {
-    val view: View = LayoutInflater.from(activity.baseContext).inflate(R.layout.upgrade_to_pro, null)
+    //val view: View = LayoutInflater.from(activity.baseContext).inflate(R.layout.upgrade_to_pro, null)
+    private var binding: UpgradeToProBinding =
+        UpgradeToProBinding.inflate(LayoutInflater.from(activity),null,false)
 
     init {
         var data = message.split(":")[1].replace(",","\n")
-        view.txtMessage.text = data
-        view.ratingImg.setImageResource(image)
+        binding.txtMessage.text = data
+        binding.ratingImg.setImageResource(image)
         if (!activity.isFinishing) {
-            val dialog = AlertDialog.Builder(activity).setView(view)
+            val dialog = AlertDialog.Builder(activity).setView(binding.root)
             val alert = dialog.setCancelable(false)
                 .setPositiveButton(positiveButtonText, this)
                 .setNegativeButton(negativeButtonText, this)
@@ -49,8 +52,8 @@ class UpgradeToPro(
             if (title.isEmpty()) {
 
                 alert.requestWindowFeature(Window.FEATURE_NO_TITLE)
-                view.txtMessage.typeface = Typeface.DEFAULT_BOLD
-                view.txtMessage.gravity = Gravity.LEFT
+                binding.txtMessage.typeface = Typeface.DEFAULT_BOLD
+                binding.txtMessage.gravity = Gravity.LEFT
             }else{
                 val titleSpan = SpannableString(title)
                 titleSpan.setSpan(
