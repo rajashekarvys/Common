@@ -9,3 +9,4 @@ fun <T> List<T>.toStringComma(): String {
     data  = data.removeSuffix(",")
     return data
 }
+

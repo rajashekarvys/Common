@@ -4,6 +4,7 @@ import android.media.MediaMetadataRetriever
 import com.tinny.commons.photoExtensions
 import com.tinny.commons.videoExtensions
 import java.util.*
+import kotlin.collections.ArrayList
 
 fun String.isVideoFast() = videoExtensions.any { endsWith(it, true) }
 
@@ -18,8 +19,16 @@ fun String.getFilenameExtension() = substring(lastIndexOf(".") + 1)
 
 fun String.areDigitsOnly() = matches(Regex("[0-9]+"))
 
+fun String.toListFromCommaSep(): ArrayList<String> {
+
+    val list = ArrayList<String>()
+    for (item in split(",")) {
+        list.add(item)
+    }
+    return list
+}
 fun String.removeLast(): String {
-    if (length > 0) {
+    if (isNotEmpty()) {
         return substring(0, length - 1)
     }
     return this
