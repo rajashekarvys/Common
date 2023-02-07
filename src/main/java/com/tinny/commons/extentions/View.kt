@@ -61,6 +61,19 @@ fun View.makeGoneAnim(duration: Long = 300,callback: () -> Unit) {
         })
 }
 
+fun View.makeAlphaGoneAnim(duration: Long = 300,callback: () -> Unit) {
+    animate()
+        .alpha(0.2f)
+        .setDuration(duration)
+        .setListener(object : AnimatorListenerAdapter() {
+            override fun onAnimationEnd(animation: Animator) {
+                super.onAnimationEnd(animation)
+                visibility = View.GONE
+                callback()
+            }
+        })
+}
+
 /*private fun toggle() {
 
 
